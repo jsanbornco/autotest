@@ -1,0 +1,38 @@
+{
+    "name": "Storyplate Blueprint",
+    "description": "Blueprint for Storyplate",
+    "instructions": "Do things.",
+    "type": "app",
+    "tags": ["Test"],
+    "thumbnail": "thumb.jpg",
+    "authors": ["Jordan Sanborn <jordan@brit.co>"],
+    "form": {
+        "schema": {
+            "type": "object",
+            "title": "Storyplate",
+            "properties": {
+                "image": {
+                    "title": "Image URL",
+                    "type": "string"
+                },
+                "copy": {
+                    "type": "array",
+                    "title": "Copy",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "main": {
+                                "title": "Overlay Text",
+                                "type": "string"
+                            },
+                            "cta": {
+                                "title": "CTA",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

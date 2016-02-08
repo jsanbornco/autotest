@@ -1,0 +1,11 @@
+{
+    "title": "Testplate",
+    "slug": "test",
+    "theme": "image",
+    "hero": {
+        "image_url": "http://storyplate.imgix.net/ads/triscuit2/img/hero3.jpg?w=1440"
+    },
+    "copy": {
+        "main": "Get some crackas"
+    }
+}
