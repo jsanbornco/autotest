@@ -1,0 +1,20 @@
+{
+  "name": "ads",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/britco/ads",
+  "authors": [
+    "Paul Dufour <paul.t.dufour@gmail.com>"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponents.js": "~0.7.0"
+  }
+}

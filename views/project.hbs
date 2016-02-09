@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  html,
+  body,
+  iframe {
+    padding: 0;
+    margin: 0;
+  }
+  
+  {{#unless embedded}}
+    iframe {
+      position: absolute;
+      top: -9999em;
+      width: 10px;
+      height: 10px;
+    }
+  {{/unless}}
+  </style>
+</head>
+<body>
+  {{#if embedded}}
+    <iframe width="320" height="300" src="{{embedded_script}}" frameborder="0"></iframe>
+  {{else}}
+    <div id="div-gpt-ad-1432687366325-0" style="width: 1px; height: 1px">
+      <div id="google_ads_iframe_/112497074/paul_storyplate_test_0__container__" style="border: 0pt none;">
+        <iframe src="javascript:&quot;<html><body style='background:transparent'><script src='{{{script_url}}}'></script></body></html>&quot;" width=0 height=0 border=0 frameborder=0 style="position: absolute; top: -9999em; width: 10px; height: 10px;">
+        </iframe>
+      </div>
+    </div>
+  {{/if}}
+</body>
+</html>

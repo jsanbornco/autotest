@@ -1,0 +1,403 @@
+// intel
+
+@import "../../styles/_settings.scss"
+@import "../../styles/_reset.scss"
+
+@keyframes draw
+  to
+    stroke-dashoffset: 0
+
+.storyplate
+  @include reset()
+
+.storyplate-top-banner
+  transition: height 0.2s, padding 0.2s
+  z-index: 9900
+  height: 0
+  width: 100%
+  position: fixed
+  overflow: hidden
+  top: 59px
+  background-repeat: no-repeat
+  background-position: center
+  @media screen and (max-width: $screen-xs-max)
+    background-size: auto 100%
+    top: 44px
+
+    .banner-logo
+      display: none
+
+  &.show-banner
+    height: 60px !important
+    @media screen and (max-width: $screen-xs-max)
+      height: 40px !important
+
+  .banner-overlay
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(82, 164, 159, 0.8)
+
+  .banner-logo
+    display: none
+    @media screen and (max-width: $screen-xs-max)
+      display: none
+
+
+  .cta-watch
+    padding-top: 30px
+    margin-top: -0.5em
+    margin-left: auto
+    margin-right: auto
+    display: block
+    width: 100%
+    text-align: center
+    @media screen and (max-width: $screen-xs-max)
+      text-align: right
+      padding-top: 0
+      margin-top: 0
+      height: 100%
+
+    div
+      display: inline
+
+      @media screen and (max-width: $screen-xs-max)
+        display: -webkit-flex
+        display: flex
+        height: 100%
+        width: 100%
+
+    h3
+      color: white
+      position: relative
+      font-size: 1.2em
+      z-index: 10
+      text-align: center
+      display: inline-block
+      font-weight: 100
+      margin-right: 20px
+      letter-spacing: 0.1em
+      vertical-align: top
+      line-height: 1
+      @media screen and (max-width: $screen-md-max)
+        font-size: 1em
+
+      @media screen and (max-width: $screen-xs-max)
+        align-self: center
+        font-size: 15px
+        width: 70%
+        margin-left: 20px
+        margin-right: 0
+      @media screen and (max-width: 550px)
+        font-size: 0.6em
+        line-height: 1.3em
+        font-weight: 500
+        width: 50%
+
+      span
+        display: none
+
+
+    .cta
+      text-align: center
+      text-transform: uppercase
+      letter-spacing: 0.1em
+      font-weight: 500
+      padding: 0 1em
+      font-size: 0.8em
+      cursor: pointer
+      position: relative
+      border-top: 12px solid white
+      border-bottom: 12px solid white
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      display: inline-block
+      line-height: 0
+      top: -0.3em
+      color: rgb(82, 164, 159)
+      &:hover
+        text-decoration: none
+
+      span
+        position: relative
+        line-height: 0
+        top: 0.1em
+
+      @media screen and (max-width: $screen-xs-max)
+        position: absolute
+        bottom: 8px
+        top: auto
+        right: 1em
+        margin: 0
+        font-size: 0.6em
+        vertical-align: bottom
+
+
+.post-page
+  .homepage-ad-video
+    margin-top: 0 !important
+    @media screen and (min-width: $screen-md-max)
+      margin-bottom: 38px
+
+
+
+.homepage-ad-video
+  display: -webkit-flex
+  display: flex
+  -webkit-align-items: center
+  align-items: center
+  -webkit-justify-content: center
+  justify-content: center
+  z-index: 0
+  overflow: hidden
+  width: 100%
+  position: relative
+  background-color: #000
+  margin-top: 20px
+  font-size: 0.8em
+  min-height: 400px
+  @media screen and (min-width: 1500px)
+    font-size: 1.2em
+
+  @media screen and (min-width: 2400px)
+    font-size: 1.5em
+
+  @media screen and (max-width: $screen-md-max)
+    min-height: 0
+
+  a:hover
+    text-decoration: none
+
+  .ad-text
+    background-color: rgba(0,0,0,.3)
+    left: 0
+    position: absolute
+    top: 0
+    color: white
+    z-index: 3
+    padding: 5px 10px
+    text-transform: uppercase
+    font-size: 10px
+
+  .text-overlay
+    position: relative
+    z-index: 3
+    text-align: center
+    margin-top: 2em
+    margin-bottom: 2em
+    padding: 2.5em 2em 4em
+    background-color: rgba(82, 164, 159, 0.85)
+
+    @media screen and (max-width: $screen-xs-max)
+      width: 100%
+      height: 100%
+      margin-top: 0
+      margin-bottom: 0
+      font-size: 0.75em
+      background-color: rgba(82, 164, 159, 0.4)
+
+    .text-bg
+      width: 100%
+      height: 100%
+      z-index: -1
+      position: absolute
+      left: 0
+      top: 0
+    a
+      text-decoration: none
+
+      &:hover
+        text-decoration: none
+
+    h1
+      color: white
+      text-transform: uppercase
+      font-weight: 400
+      display: block
+      margin-left: auto
+      margin-right: auto
+      max-width: 16em
+      font-size: 2.2em
+      letter-spacing: 0.13em
+      line-height: 1.45
+      @media screen and (max-width: $screen-xs-max)
+        font-size: 1.8em
+        max-width: 22em
+        letter-spacing: 0.1em
+
+      span
+        display: block
+        text-transform: none
+        font-size: 0.8em
+        font-weight: 100
+        line-height: 1.2em
+        @media screen and (max-width: $screen-xs-max)
+          margin: 0 1em
+
+    a.cta-read
+      position: relative
+      color: rgb(82, 164, 159)
+      display: inline-block
+      line-height: 0
+      text-align: center
+      letter-spacing: 0.1em
+      font-weight: 500
+      cursor: pointer
+      text-decoration: none
+      font-size: 15px
+      padding: 16px 1.75em 0
+      margin-top: 1em
+
+      &:before
+        border-top: 1em solid white
+        border-bottom: 1em solid white
+        border-left: 1em solid transparent
+        border-right: 1em solid transparent
+        content: ''
+        width: 100%
+        height: 0
+        position: absolute
+        padding: 0 0.75em
+        left: 0
+        top: 0
+        z-index: -1
+
+      @media screen and (max-width: $screen-xs-max)
+        margin-top: 0.6em
+
+      &:hover
+        text-decoration: none
+
+    img
+      text-align: center
+      margin: 0 auto
+      vertical-align: bottom
+
+      @media screen and (max-width: $screen-sm)
+        width: 75px
+
+      &:hover
+        transform: scale(1.05)
+        transition: 0.3s ease-in-out
+        cursor: pointer
+
+    .sponsor
+      margin-top: 1.5em
+      opacity: 1
+      z-index: -2
+      position: relative
+
+      .storyplate-presented
+        display: block
+        width: 15em
+        height: 2.2em
+
+        @media screen and (max-width: $screen-xs-max)
+          width: auto
+          height: 3.1em
+
+      img.sponsorlogo
+        margin-top: 1em
+        display: inline-block
+        width: 6em
+        margin-left: auto
+        margin-right: auto
+        position: relative
+
+        @media screen and (max-width: $screen-xs)
+          width: 7em
+
+  .overlay-border
+    position: absolute
+    width: 94%
+    height: 94%
+    left: 3%
+    top: 3%
+    border: 1px solid rgba(255,255,255,0.4)
+    z-index: -1
+
+    @media screen and (max-width: $screen-xs-max)
+      display: none
+
+  .storyplate-video-container
+    position: absolute
+    -webkit-display: flex
+    display: flex
+    -webkit-align-items: flex-start
+    align-items: center
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: url('http://brightcove.vo.llnwd.net/e1/pd/4365621443001/4365621443001_4664162818001_4663994357001-vs.jpg?pubId=4365621443001&videoId=4663994357001')
+    background-size: 100% auto
+    background-repeat: no-repeat
+    background-position: center -48px
+
+    @media screen and (max-width: $screen-xs-max)
+      display: none
+
+  .video-js
+    position: relative
+    width: 100%
+    height: 100%
+    background-color: transparent
+
+    video
+      top: -11%
+      width: 100% !important
+      height: auto !important
+
+    .vjs-loading-spinner, .vjs-text-track-display, .vjs-big-play-button, .vjs-control-bar, .vjs-error-display, .vjs-caption-settings
+      display: none !important
+
+    .vjs-poster
+      background-size: 100% auto
+
+  video.ad-video
+    position: relative
+    top: -20px
+    z-index: 2
+    width: 100%
+
+    @media screen and (max-width: $screen-xs)
+      margin-top: 0
+      width: 140%
+      min-height: 100%
+
+  video::-webkit-media-controls
+    display: none !important
+
+  .ad-hero
+    display: none
+
+    @media screen and (max-width: $screen-xs-max)
+      display: block
+      position: absolute
+      width: 140%
+      top: -40%
+      left: 0
+      margin-left: -20%
+
+    @media screen and (max-width: 405px)
+      top: 0
+
+  .ad-hero-bg
+    display: none
+
+    @media screen and (max-width: $screen-xs-max)
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      background: url('https://storyplate.imgix.net/ads/lowes/img/hero_bath.jpg<%= HERO_IMAGE_ARGS %>')
+      background-size: auto 100%
+      background-position: center
+      background-repeat: no-repeat
+
+    @media screen and (min-width: 464px)
+      background-size: 100% auto
