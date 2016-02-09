@@ -12,7 +12,7 @@
             "title": "Storyplate",
             "properties": {
                 "image": {
-                    "title": "Image URL",
+                    "title": "Hero URL",
                     "type": "string"
                 },
                 "copy": {

@@ -2,10 +2,15 @@
     "title": "Testplate",
     "slug": "test",
     "theme": "image",
-    "hero": {
-        "image_url": "http://storyplate.imgix.net/ads/triscuit2/img/hero3.jpg?w=1440"
-    },
-    "copy": {
-        "main": "Get some crackas"
-    }
+    "hero": "http://storyplate.imgix.net/ads/triscuit2/img/hero3.jpg?w=1440",
+    "copy": [
+        {
+            "main": "Test",
+            "cta": "Testclick"
+        },
+        {
+          "main": "Test2",
+          "cta": "Testclick2"
+        }
+    ]
 }
