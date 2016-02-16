@@ -11,6 +11,10 @@
             "type": "object",
             "title": "Storyplate",
             "properties": {
+                "ID": {
+                    "title": "Ad ID",
+                    "type": "string"
+                },
                 "image": {
                     "title": "Hero URL",
                     "type": "string"

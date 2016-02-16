@@ -2,6 +2,7 @@
     "title": "Testplate",
     "slug": "test",
     "theme": "image",
+    "id": "TestAd00000000",
     "hero": "http://storyplate.imgix.net/ads/triscuit2/img/hero3.jpg?w=1440",
     "copy": [
         {
