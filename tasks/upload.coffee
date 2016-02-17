@@ -97,21 +97,21 @@ gzip = (cb) ->
   return es.map (file, cb) ->
     if file.isDirectory() or file.isNull()
       cb null, file
+    # else
+    #   contentType = mime.lookup(file.path)
+    #
+    #   if contentType in compressContentTypes
+    #     zlib = require 'zlib'
+    #
+    #     zlib.gzip file.contents, (err, compressedContents) ->
+    #       if err? then return cb(null, file)
+    #       gutil.log "gzipped #{file.path}"
+    #
+    #       file.contents = compressedContents
+    #       file.contentEncoding = 'gzip'
+    #       cb(null, file)
     else
-      contentType = mime.lookup(file.path)
-
-      if contentType in compressContentTypes
-        zlib = require 'zlib'
-
-        zlib.gzip file.contents, (err, compressedContents) ->
-          if err? then return cb(null, file)
-          gutil.log "gzipped #{file.path}"
-
-          file.contents = compressedContents
-          file.contentEncoding = 'gzip'
-          cb(null, file)
-      else
-        cb null, file
+      cb null, file
 
 gulp.task 'upload', (done) ->
   # Upload to S3
