@@ -8,7 +8,7 @@ copy = window.storyplateCopy
 if copy
   COPY_OPTION = copy
 else
-  COPY_OPTION = '1'
+  COPY_OPTION = '0'
 
 
 if window.clickmacro
