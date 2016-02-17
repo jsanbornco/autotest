@@ -13,11 +13,27 @@
             "properties": {
                 "ID": {
                     "title": "Ad ID",
-                    "type": "string"
+                    "type": "string",
+                    "required": true
                 },
                 "image": {
                     "title": "Hero URL",
-                    "type": "string"
+                    "type": "string",
+                    "required": true
+                },
+                "offset": {
+                    "title": "Hero Offset (in %)",
+                    "type": "number"
+                },
+                "logo": {
+                    "title": "Logo URL",
+                    "type": "string",
+                    "required": true
+                },
+                "bg_color": {
+                    "title": "Background Color",
+                    "type": "color",
+                    "required": true
                 },
                 "copy": {
                     "type": "array",
@@ -26,15 +42,31 @@
                         "type": "object",
                         "properties": {
                             "main": {
-                                "title": "Overlay Text",
-                                "type": "string"
+                                "title": "Main Copy",
+                                "type": "string",
+                                "required": true
                             },
                             "cta": {
-                                "title": "CTA",
-                                "type": "string"
+                                "title": "CTA Copy",
+                                "type": "string",
+                                "required": true
+                            },
+                            "cta_color": {
+                                "title": "CTA Color",
+                                "type": "color",
+                                "required": true
                             }
                         }
                     }
+                }
+            }
+        },
+        "options": {
+            "fields": {
+                "offset": {
+                    "type": "integer",
+                    "maximum": 100,
+                    "numericEntry": true
                 }
             }
         }
