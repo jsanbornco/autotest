@@ -5,6 +5,13 @@ options = require '../../data/autotune.json'
 
 copy = window.storyplateCopy
 
+colorConvert = (hex) ->
+  dec = parseInt hex, 16
+  r = (dec >> 16) & 255
+  g = (dec >> 8) & 255
+  b = dec & 255
+  [r, g, b].join()
+
 if copy
   COPY_OPTION = copy
 else
@@ -26,6 +33,18 @@ if window.hovermacro
 else
   hoverMacro = ''
 
+if options.bg_color
+  overlay_color = colorConvert(options.bg_color)
+else
+  overlay_color = '255, 255, 255'
+
+if options.copy[COPY_OPTION].cta_color
+  cta_color = colorConvert(options.copy[COPY_OPTION].cta_color)
+else
+  cta_color = '41, 48, 142'
+
+
+
 banner = top.document.createElement('div')
 banner.className = 'storyplate-top-banner storyplate'
 
@@ -37,6 +56,10 @@ render
   data: {
     OVERLAY_COPY: options.copy[COPY_OPTION].main
     BUTTON_COPY: options.copy[COPY_OPTION].cta
+    HERO_IMAE_URL: options.image
+    LOGO_URL: options.logo
+    OVERLAY_COLOR: overlay_color
+    CTA_COLOR: cta_color
 
     CLICK_MACRO: clickMacro
 

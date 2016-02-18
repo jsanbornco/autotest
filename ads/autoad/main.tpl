@@ -40,7 +40,7 @@
 
       <div class="sponsor">
         <img class="storyplate-presented" src="<%= STATIC_URL %>/img/presented-by.svg" />
-        <img src="<%= STATIC_URL %>/img/logo.png" class="sponsorlogo">
+        <img src="<%= LOGO_URL %>" class="sponsorlogo">
       </div>
 
     </div>
@@ -48,7 +48,7 @@
     <div class="ad-hero">
       <div class="fixed-hero-container">
         <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= CLICK_MACRO %>">
-          <img class="ad-hero-img" src="https://storyplate.imgix.net/ads/triscuit/img/hero_pumpkin.jpg<%= HERO_IMAGE_ARGS %>" />
+          <img class="ad-hero-img" src="<%= HERO_IMAGE_URL %><%= HERO_IMAGE_ARGS %>" />
         </a>
       </div>
     </div>
