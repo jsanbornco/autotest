@@ -7,6 +7,11 @@
   to
     stroke-dashoffset: 0
 
+$overlay_color: 'rgba(<%= OVERLAY_COLOR %>, 0.9)'
+$overlay_color_solid: 'rgb(<%= OVERLAY_COLOR %>)'
+
+$cta_color: 'rgb(<%= CTA_COLOR %>)'
+
 .feed-modules-eq-height
   position: relative
   z-index: 1
@@ -46,7 +51,7 @@
     position: absolute
     top: 0
     left: 0
-    background-color: rgba(<%= OVERLAY_COLOR %>, 0.9)
+    background-color: #{$overlay_color}
 
   .banner-logo
     display: none
@@ -103,8 +108,8 @@
       font-size: 0.8em
       cursor: pointer
       position: relative
-      border-top: 12px solid white
-      border-bottom: 12px solid white
+      border-top: 12px solid #{$cta_color}
+      border-bottom: 12px solid #{$cta_color}
       border-left: 10px solid transparent
       border-right: 10px solid transparent
       display: inline-block
@@ -172,7 +177,7 @@
   overflow: hidden
   width: 100%
   position: relative
-  background-color: rgb(<%= OVERLAY_COLOR %>)
+  background-color: #{$overlay_color_solid}
   margin-top: 20px
   z-index: 0
   font-size: 0.8em
@@ -204,7 +209,7 @@
     margin-top: 2em
     margin-bottom: 2em
     padding: 2.5em 1em 3em 1em
-    background-color: rgba(<%= OVERLAY_COLOR %>, 0.9)
+    background-color: #{$overlay_color}
 
     @media screen and (max-width: $screen-xs-max)
       width: 100%
@@ -212,7 +217,7 @@
       margin-top: 0
       margin-bottom: 0
       font-size: 0.75em
-      background-color: rgba(<%= OVERLAY_COLOR %>, 0.8)
+      background-color: #{$overlay_color}
 
     .text-bg
       width: 100%
@@ -254,7 +259,7 @@
 
     a.cta-read
       position: relative
-      color: rgb(<%= OVERLAY_COLOR %>)
+      color: #{$overlay_color_solid}
       display: inline-block
       line-height: 0
       text-align: center
@@ -267,8 +272,8 @@
       margin-top: 1em
 
       &:before
-        border-top: 1em solid rgb(<%= CTA_COLOR %>)
-        border-bottom: 1em solid rgb(<%= CTA_COLOR %>)
+        border-top: 1em solid #{$cta_color}
+        border-bottom: 1em solid #{$cta_color}
         border-left: 1em solid transparent
         border-right: 1em solid transparent
         content: ''
