@@ -6,7 +6,7 @@ options = require '../../data/autotune.json'
 copy = window.storyplateCopy
 
 colorConvert = (hex) ->
-  dec = parseInt hex, 16
+  dec = parseInt hex.replace('#', ''), 16
   r = (dec >> 16) & 255
   g = (dec >> 8) & 255
   b = dec & 255
@@ -56,7 +56,7 @@ render
   data: {
     OVERLAY_COPY: options.copy[COPY_OPTION].main
     BUTTON_COPY: options.copy[COPY_OPTION].cta
-    HERO_IMAE_URL: options.image
+    HERO_IMAGE_URL: options.image
     LOGO_URL: options.logo
     OVERLAY_COLOR: overlay_color
     CTA_COLOR: cta_color
