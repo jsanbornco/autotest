@@ -4,7 +4,7 @@
     "instructions": "Do things.",
     "type": "app",
     "tags": ["Test"],
-    "thumbnail": "thumb.jpg",
+    "thumbnail": "logo.png",
     "authors": ["Jordan Sanborn <jordan@brit.co>"],
     "form": {
         "schema": {
