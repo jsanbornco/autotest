@@ -38,7 +38,7 @@
       </a>
       <a class="cta-read" id="storyplate-<%= AD_ID %>-cta-redirect" href="<%= CLICK_MACRO %>" target="_blank"><%= BUTTON_COPY %></a>
 
-      <% if (LOGO_URL) { %>
+      <% if (LOGO_URL !== undefined && LOGO_URL !== '') { %>
       <div class="sponsor">
         <img class="storyplate-presented" src="<%= STATIC_URL %>/img/presented-by.svg" />
         <img src="<%= LOGO_URL %>" class="sponsorlogo">
