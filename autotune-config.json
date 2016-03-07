@@ -28,7 +28,7 @@
                 "logo": {
                     "title": "Logo URL",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 "bg_color": {
                     "title": "Background Color",
