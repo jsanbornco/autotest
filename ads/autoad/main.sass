@@ -8,6 +8,7 @@
     stroke-dashoffset: 0
 
 $overlay_color: 'rgba(<%= OVERLAY_COLOR %>, 0.9)'
+$overlay_color_mobile: 'rgba(<%= OVERLAY_COLOR %>, <%= OVERLAY_OPACITY_MOBILE %>)'
 $overlay_color_solid: 'rgb(<%= OVERLAY_COLOR %>)'
 
 $cta_color: 'rgb(<%= CTA_COLOR %>)'
@@ -217,7 +218,7 @@ $cta_color: 'rgb(<%= CTA_COLOR %>)'
       margin-top: 0
       margin-bottom: 0
       font-size: 0.75em
-      background-color: #{$overlay_color}
+      background-color: #{$overlay_color_mobile}
 
     .text-bg
       width: 100%
@@ -348,6 +349,7 @@ $cta_color: 'rgb(<%= CTA_COLOR %>)'
     img
       width: 100%
       position: relative
+      max-width: none
       &.sp-hero-med
         display: none
 

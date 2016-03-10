@@ -43,6 +43,11 @@ if options.copy[COPY_OPTION].cta_color
 else
   cta_color = '41, 48, 142'
 
+if options.bg_opacity_mobile
+  overlay_opacity_mobile = options.bg_opacity_mobile
+else
+  overlay_opacity_mobile = '0.6'
+
 
 
 banner = top.document.createElement('div')
@@ -59,6 +64,7 @@ render
     HERO_IMAGE_URL: options.image
     LOGO_URL: options.logo
     OVERLAY_COLOR: overlay_color
+    OVERLAY_OPACITY_MOBILE: overlay_opacity_mobile
     CTA_COLOR: cta_color
 
     CLICK_MACRO: clickMacro

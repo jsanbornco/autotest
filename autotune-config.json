@@ -35,6 +35,11 @@
                     "type": "color",
                     "required": true
                 },
+                "bg_opacity_mobile": {
+                    "title": "Mobile BG Opacity",
+                    "type": "string",
+                    "required": false
+                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",
