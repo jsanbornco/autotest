@@ -43,6 +43,11 @@ if options.copy[COPY_OPTION].cta_color
 else
   cta_color = '41, 48, 142'
 
+if options.copy[COPY_OPTION].cta2_color
+  cta2_color = colorConvert(options.copy[COPY_OPTION].cta_color)
+else
+  cta2_color = '41, 48, 142'
+
 if options.bg_opacity_mobile
   overlay_opacity_mobile = options.bg_opacity_mobile
 else
@@ -61,13 +66,16 @@ render
   data: {
     OVERLAY_COPY: options.copy[COPY_OPTION].main
     BUTTON_COPY: options.copy[COPY_OPTION].cta
+    BUTTON2_COPY: options.copy[COPY_OPTION].cta2
     HERO_IMAGE_URL: options.image
     LOGO_URL: options.logo
     OVERLAY_COLOR: overlay_color
     OVERLAY_OPACITY_MOBILE: overlay_opacity_mobile
     CTA_COLOR: cta_color
+    CTA2_COLOR: cta2_color
 
     CLICK_MACRO: clickMacro
+    CLICK_MACRO_2: clickMacro2
 
     HOVER_MACRO: hoverMacro
     AD_ID: options.id
