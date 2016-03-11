@@ -40,10 +40,6 @@
                     "type": "string",
                     "required": false
                 },
-                "secondary_cta": {
-                    "title": "Secondary CTA?",
-                    "type": "boolean"
-                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",
@@ -64,6 +60,10 @@
                                 "title": "CTA Color",
                                 "type": "color",
                                 "required": true
+                            },
+                            "secondary_cta": {
+                                "title": "Secondary CTA?",
+                                "type": "boolean"
                             },
                             "cta2": {
                                 "title": "Secondary CTA Copy",
