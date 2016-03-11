@@ -37,7 +37,7 @@
         <h1 id="storyplate-tagline"><%= OVERLAY_COPY %></h1>
       </a>
       <a class="cta-read" id="storyplate-<%= AD_ID %>-cta-redirect" href="<%= CLICK_MACRO %>" target="_blank"><%= BUTTON_COPY %></a>
-      <% if (CLICK_MACRO_2 !== undefined && CLICK_MACRO_2 !== '') { %>
+      <% if (BUTTON2_COPY !== undefined && BUTTON2_COPY !== '') { %>
         <div></div>
         <a class="cta-read cta2" id="storyplate-<%= AD_ID %>-cta2-redirect" href="<%= CLICK_MACRO_2 %>" target="_blank"><%= BUTTON2_COPY %></a>
       <% } %>
