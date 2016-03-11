@@ -68,18 +68,16 @@
                             "cta2": {
                                 "title": "Secondary CTA Copy",
                                 "type": "string",
-                                "required": true
+                                "required": true,
+                                "dependencies": ["secondary_cta"]
                             },
                             "cta2_color": {
                                 "title": "Secondary CTA Color",
                                 "type": "color",
-                                "required": true
+                                "required": true,
+                                "dependencies": ["secondary_cta"]
                             }
                         }
-                    },
-                    "dependencies": {
-                        "cta2": ["secondary_cta"],
-                        "cta2_color": ["secondary_cta"]
                     }
                 }
             }
