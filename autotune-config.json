@@ -76,12 +76,12 @@
                                 "required": true
                             }
                         }
+                    },
+                    "dependencies": {
+                        "cta2": ["secondary_cta"],
+                        "cta2_color": ["secondary_cta"]
                     }
                 }
-            },
-            "dependencies": {
-                "bg_opacity_mobile": ["secondary_cta"],
-                "cta2_color": ["secondary_cta"]
             }
         },
         "options": {
