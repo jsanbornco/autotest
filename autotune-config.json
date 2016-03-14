@@ -11,7 +11,7 @@
             "type": "object",
             "title": "Storyplate",
             "properties": {
-                "ID": {
+                "id": {
                     "title": "Ad ID",
                     "type": "string",
                     "required": true
