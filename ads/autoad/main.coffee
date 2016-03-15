@@ -44,7 +44,7 @@ else
   cta_color = '41, 48, 142'
 
 if options.copy[COPY_OPTION].cta2_color
-  cta2_color = colorConvert(options.copy[COPY_OPTION].cta_color)
+  cta2_color = colorConvert(options.copy[COPY_OPTION].cta2_color)
 else
   cta2_color = '41, 48, 142'
 
