@@ -75,7 +75,9 @@ $offset: '<%= OFFSET %>'
     text-align: center
     @media screen and (max-width: $screen-xs-max)
       text-align: right
-      padding-top: 20px
+      padding-top: 0
+      margin-top: 0
+      height: 100%
 
     div
       display: inline
@@ -104,7 +106,6 @@ $offset: '<%= OFFSET %>'
       @media screen and (max-width: $screen-xs-max)
         -webkit-align-self: center
         align-self: center
-        float: left
         font-size: 15px
         width: 70%
         margin-left: 20px
@@ -117,7 +118,6 @@ $offset: '<%= OFFSET %>'
 
       span
         display: none
-
 
     .cta
       text-align: center
@@ -137,9 +137,19 @@ $offset: '<%= OFFSET %>'
       top: -0.3em
       &:hover
         text-decoration: none
+
+      span
+        position: relative
+        line-height: 0
+        top: 0.1em
+
       @media screen and (max-width: $screen-xs-max)
+        position: absolute
+        bottom: 8px
+        top: auto
+        right: 1em
+        margin: 0
         font-size: 0.6em
-        margin-right: 20px
         vertical-align: bottom
 
 
