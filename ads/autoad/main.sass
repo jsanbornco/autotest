@@ -66,6 +66,7 @@ $offset: '<%= OFFSET %>'
 
   .cta-watch
     padding-top: 30px
+    color: white
     margin-top: -0.5em
     margin-left: auto
     margin-right: auto
@@ -75,6 +76,15 @@ $offset: '<%= OFFSET %>'
     @media screen and (max-width: $screen-xs-max)
       text-align: right
       padding-top: 20px
+
+    div
+      display: inline
+
+      @media screen and (max-width: $screen-xs-max)
+        display: -webkit-flex
+        display: flex
+        height: 100%
+        width: 100%
 
     h3
       color: #{$copy_color}
@@ -88,14 +98,19 @@ $offset: '<%= OFFSET %>'
       letter-spacing: 0.1em
       vertical-align: top
       line-height: 1
+      @media screen and (max-width: $screen-md-max)
+        font-size: 1em
+
       @media screen and (max-width: $screen-xs-max)
+        -webkit-align-self: center
+        align-self: center
         float: left
         font-size: 15px
         width: 70%
         margin-left: 20px
         margin-right: 0
       @media screen and (max-width: 550px)
-        font-size: 0.8em
+        font-size: 0.6em
         line-height: 1.3em
         font-weight: 500
         width: 50%

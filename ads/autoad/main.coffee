@@ -105,8 +105,11 @@ render
         <a id="storyplate-#{data.AD_ID}-banner-bg-redirect" target="_blank" href="#{data.CLICK_MACRO}">
           <div class="banner-overlay"></div>
         </a>
+
         <a id="storyplate-#{data.AD_ID}-banner-tagline-redirect" target="_blank" href="#{data.CLICK_MACRO}">
-          <h3>#{options.copy[COPY_OPTION].main}</h3>
+          <div>
+            <h3>#{options.copy[COPY_OPTION].main}</h3>
+          </div>
         </a>
         <a id="storyplate-#{data.AD_ID}-banner-cta-redirect" href="#{data.CLICK_MACRO}" class="cta" target="_blank">
           #{options.copy[COPY_OPTION].cta}
