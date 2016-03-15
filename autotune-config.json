@@ -80,7 +80,7 @@
                             "dark": {
                                 "title": "Dark Text?",
                                 "type": "boolean"
-                            },
+                            }
                         }
                     }
                 }
