@@ -6,7 +6,7 @@ options = require '../../data/autotune.json'
 copy = window.storyplateCopy
 
 copyMatch = top.window.location.search.match(/copy=(\d)/)
-if copyMatch
+if copyMatch and top.window.location.search.match('sp_ad')
   copy = copyMatch[1]
 
 colorConvert = (hex) ->
