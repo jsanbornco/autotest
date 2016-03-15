@@ -64,6 +64,10 @@ else
   presented = "presented-by.svg"
   copy_color = '#fff'
 
+if options.offset
+  offset = options.offset
+else
+  offset = 17
 
 
 banner = top.document.createElement('div')
@@ -86,6 +90,7 @@ render
     CTA2_COLOR: cta2_color
     COPY_COLOR: copy_color
     PRESENTED: presented
+    OFFSET: offset
 
     CLICK_MACRO: clickMacro
     CLICK_MACRO_2: clickMacro2

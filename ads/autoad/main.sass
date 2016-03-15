@@ -15,6 +15,7 @@ $cta_color: 'rgb(<%= CTA_COLOR %>)'
 $cta2_color: 'rgb(<%= CTA2_COLOR %>)'
 
 $copy_color: '<%= COPY_COLOR %>'
+$offset = '<%= OFFSET %>'
 
 .feed-modules-eq-height
   position: relative
@@ -135,7 +136,7 @@ $copy_color: '<%= COPY_COLOR %>'
 
     .ad-hero
       position: absolute !important
-      margin-bottom: -17% !important
+      margin-bottom: -#{$offset} !important
 
       @media screen and (max-width: $screen-xs-max)
         img
