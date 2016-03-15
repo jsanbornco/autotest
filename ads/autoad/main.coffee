@@ -54,11 +54,11 @@ else
   overlay_opacity_mobile = '0.6'
 
 if options.copy[COPY_OPTION].dark
-  copy_color = '#fff'
+  copy_color = '#525252'
   presented = "presented-by_black.svg"
 else
   presented = "presented-by.svg"
-  copy_color = '#525252'
+  copy_color = '#fff'
 
 
 
