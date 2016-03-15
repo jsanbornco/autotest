@@ -5,6 +5,10 @@ options = require '../../data/autotune.json'
 
 copy = window.storyplateCopy
 
+copyMatch = location.search.match(/copy=(\d)/)
+if copyMatch
+  copy = copyMatch[1]
+
 colorConvert = (hex) ->
   dec = parseInt hex.replace('#', ''), 16
   r = (dec >> 16) & 255
