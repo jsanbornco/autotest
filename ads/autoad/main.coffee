@@ -5,7 +5,7 @@ options = require '../../data/autotune.json'
 
 copy = window.storyplateCopy
 
-copyMatch = location.search.match(/copy=(\d)/)
+copyMatch = top.window.location.search.match(/copy=(\d)/)
 if copyMatch
   copy = copyMatch[1]
 
