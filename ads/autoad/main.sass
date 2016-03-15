@@ -14,6 +14,8 @@ $overlay_color_solid: 'rgb(<%= OVERLAY_COLOR %>)'
 $cta_color: 'rgb(<%= CTA_COLOR %>)'
 $cta2_color: 'rgb(<%= CTA2_COLOR %>)'
 
+$copy_color: '<%= COPY_COLOR %>'
+
 .feed-modules-eq-height
   position: relative
   z-index: 1
@@ -235,7 +237,7 @@ $cta2_color: 'rgb(<%= CTA2_COLOR %>)'
         text-decoration: none
 
     h1
-      color: white
+      color: #{$copy_color}
       text-transform: uppercase
       font-weight: 400
       display: block

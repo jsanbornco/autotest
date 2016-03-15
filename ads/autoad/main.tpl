@@ -45,7 +45,7 @@
 
       <% if (LOGO_URL !== undefined && LOGO_URL !== '') { %>
       <div class="sponsor">
-        <img class="storyplate-presented" src="<%= STATIC_URL %>/img/presented-by.svg" />
+        <img class="storyplate-presented" src="<%= STATIC_URL %>/img/<%= PRESENTED %>" />
         <img src="<%= LOGO_URL %>" class="sponsorlogo">
       </div>
       <% } %>

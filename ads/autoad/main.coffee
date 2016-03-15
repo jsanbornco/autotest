@@ -53,6 +53,13 @@ if options.bg_opacity_mobile
 else
   overlay_opacity_mobile = '0.6'
 
+if options.copy[COPY_OPTION].dark
+  copy_color = '#fff'
+  presented = "presented-by_black.svg"
+else
+  presented = "presented-by.svg"
+  copy_color = '#525252'
+
 
 
 banner = top.document.createElement('div')
@@ -73,6 +80,8 @@ render
     OVERLAY_OPACITY_MOBILE: overlay_opacity_mobile
     CTA_COLOR: cta_color
     CTA2_COLOR: cta2_color
+    COPY_COLOR: copy_color
+    PRESENTED: presented
 
     CLICK_MACRO: clickMacro
     CLICK_MACRO_2: clickMacro2

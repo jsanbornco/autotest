@@ -76,7 +76,11 @@
                                 "type": "color",
                                 "required": true,
                                 "dependencies": ["secondary_cta"]
-                            }
+                            },
+                            "dark": {
+                                "title": "Dark Text?",
+                                "type": "boolean"
+                            },
                         }
                     }
                 }
