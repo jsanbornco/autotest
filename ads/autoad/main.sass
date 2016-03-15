@@ -1,4 +1,4 @@
-// so delicious
+// autotune storyplate
 
 @import "../../styles/_settings.scss"
 @import "../../styles/_reset.scss"
@@ -200,9 +200,9 @@ $offset: '<%= OFFSET %>'
   display: -webkit-flex
   display: flex
   -webkit-align-items: center
+  align-items: center
   -webkit-justify-content: center
   justify-content: center
-  align-items: center
   z-index: 0
   overflow: hidden
   width: 100%
@@ -317,6 +317,8 @@ $offset: '<%= OFFSET %>'
 
       @media screen and (max-width: $screen-xs-max)
         margin-top: 0.6em
+        font-size: 10px !important
+        padding: 11px 1.75em 0
 
       &:hover
         text-decoration: none
@@ -324,6 +326,10 @@ $offset: '<%= OFFSET %>'
     a.cta2
       color: white
       margin-top: 1.5em
+
+      @media screen and (max-width: 370px)
+        padding-top: 12px
+        font-size: 12px
 
       &:before
         border-top: 1em solid #{$cta2_color}
@@ -389,3 +395,81 @@ $offset: '<%= OFFSET %>'
       img
         height: auto
         width: 150%
+
+.guide-single
+
+  .homepage-ad-video
+    margin-top: 0
+
+    .ad-hero
+      height: 100%
+
+    .fixed-hero-container
+      display: -webkit-flex
+      display: flex
+      -webkit-align-items: center
+      align-items: center
+      height: 100%
+
+  .storyplate-top-banner
+    .cta-watch
+      padding-top: 2em
+
+    .banner-overlay
+      opacity: 1
+
+
+
+  .cover
+    transition: opacity 500ms
+    opacity: 0
+
+  .cover-nav
+    display: none
+
+
+
+
+  .title, .subtitle
+    color: #444
+
+  .guide-meta-items *
+    color: #444 !important
+
+  @media screen and (min-width: 1024px)
+    .guide-meta-header
+      padding-top: 60px !important
+
+  .guide-toolbar-container.scroll-to-fixed-fixed
+    top: 119px !important
+
+  @media screen and (max-width: 768px)
+    .storyplate-top-banner
+      top: 51px
+
+      .cta-watch
+        padding-top: 0
+
+        h3
+          font-size: 1em
+
+      .cta
+        position: absolute
+        font-size: 0.9em
+        top: 8px
+        right: 0
+
+      .banner-overlay
+        opacity: 0.9
+
+    .guide-meta-inner
+      position: relative
+      padding: 20px 25px 30px 25px
+
+    .main-image
+      display: block
+      margin: 0 auto
+      border: #dadada 2px solid
+      width: 90%
+      height: auto
+      max-width: 450px
