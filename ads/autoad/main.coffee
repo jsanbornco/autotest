@@ -10,11 +10,12 @@ if copyMatch and top.window.location.search.match('sp_ad')
   copy = copyMatch[1]
 
 colorConvert = (hex) ->
-  dec = parseInt hex.replace('#', ''), 16
-  r = (dec >> 16) & 255
-  g = (dec >> 8) & 255
-  b = dec & 255
-  [r, g, b].join()
+  if hex
+    dec = parseInt hex.replace('#', ''), 16
+    r = (dec >> 16) & 255
+    g = (dec >> 8) & 255
+    b = dec & 255
+    [r, g, b].join()
 
 if copy
   COPY_OPTION = copy
