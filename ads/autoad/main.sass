@@ -16,6 +16,8 @@ $cta2_color: 'rgb(<%= CTA2_COLOR %>)'
 
 $copy_color: '<%= COPY_COLOR %>'
 $offset: '<%= OFFSET %>'
+$m_offset: '<%= MOBILE_OFFSET %>'
+$m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
 
 .feed-modules-eq-height
   position: relative
@@ -165,9 +167,9 @@ $offset: '<%= OFFSET %>'
 
       @media screen and (max-width: $screen-xs-max)
         img
-          left: -30%
+          left: -#{$m_left_offset}%
           position: absolute
-          bottom: 0
+          bottom: #{m_$offset}%
 
       @media screen and (max-width: 766px)
         margin-bottom: -24% !important

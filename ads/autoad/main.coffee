@@ -21,42 +21,6 @@ if copy
 else
   COPY_OPTION = '0'
 
-
-if window.clickmacro
-  clickMacro = window.clickmacro
-else
-  clickMacro = ''
-
-if window.clickmacro2
-  clickMacro2 = window.clickmacro2
-else
-  clickMacro2 = ''
-
-if window.hovermacro
-  hoverMacro = window.hovermacro
-else
-  hoverMacro = ''
-
-if options.bg_color
-  overlay_color = colorConvert(options.bg_color)
-else
-  overlay_color = '255, 255, 255'
-
-if options.copy[COPY_OPTION].cta_color
-  cta_color = colorConvert(options.copy[COPY_OPTION].cta_color)
-else
-  cta_color = '41, 48, 142'
-
-if options.copy[COPY_OPTION].cta2_color
-  cta2_color = colorConvert(options.copy[COPY_OPTION].cta2_color)
-else
-  cta2_color = '41, 48, 142'
-
-if options.bg_opacity_mobile
-  overlay_opacity_mobile = options.bg_opacity_mobile
-else
-  overlay_opacity_mobile = '0.6'
-
 if options.copy[COPY_OPTION].dark
   copy_color = '#525252'
   presented = "presented-by_black.svg"
@@ -64,10 +28,29 @@ else
   presented = "presented-by.svg"
   copy_color = '#fff'
 
-if options.offset
-  offset = options.offset
-else
-  offset = 17
+data = {
+  OVERLAY_COPY: options.copy[COPY_OPTION].main
+  BUTTON_COPY: options.copy[COPY_OPTION].cta
+  BUTTON2_COPY: options.copy[COPY_OPTION].cta2
+  HERO_IMAGE_URL: options.image
+  LOGO_URL: options.logo
+  OVERLAY_COLOR: colorConvert(options.bg_color) or '255, 255, 255'
+  OVERLAY_OPACITY_MOBILE: options.bg_opacity_mobile or '0.6'
+  CTA_COLOR: colorConvert(options.copy[COPY_OPTION].cta_color) or '41, 48, 142'
+  CTA2_COLOR: colorConvert(options.copy[COPY_OPTION].cta2_color) or '41, 48, 142'
+  COPY_COLOR: copy_color
+  PRESENTED: presented
+  OFFSET: options.offset or 17
+  MOBILE_OFFSET: options.mobile_offset or 0
+  MOBILE_LEFT_OFFSET: options.mobile_left_offset or 30
+
+  CLICK_MACRO: window.clickmacro or ''
+  CLICK_MACRO_2: window.clickmacro2 or ''
+
+  AD_ID: options.id
+}
+
+
 
 
 banner = top.document.createElement('div')
@@ -78,26 +61,7 @@ render
   name: __dirname.split('/').slice(-1)[0]
   template: require './main.tpl'
   style: require './main.sass'
-  data: {
-    OVERLAY_COPY: options.copy[COPY_OPTION].main
-    BUTTON_COPY: options.copy[COPY_OPTION].cta
-    BUTTON2_COPY: options.copy[COPY_OPTION].cta2
-    HERO_IMAGE_URL: options.image
-    LOGO_URL: options.logo
-    OVERLAY_COLOR: overlay_color
-    OVERLAY_OPACITY_MOBILE: overlay_opacity_mobile
-    CTA_COLOR: cta_color
-    CTA2_COLOR: cta2_color
-    COPY_COLOR: copy_color
-    PRESENTED: presented
-    OFFSET: offset
-
-    CLICK_MACRO: clickMacro
-    CLICK_MACRO_2: clickMacro2
-
-    HOVER_MACRO: hoverMacro
-    AD_ID: options.id
-  }
+  data: data
   maximize: true
   (err, element, data) ->
     banner.innerHTML = """

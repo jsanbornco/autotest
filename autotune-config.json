@@ -35,10 +35,27 @@
                     "type": "color",
                     "required": true
                 },
+                "mobile_extra": {
+                    "title": "Extra Mobile Options",
+                    "type": "boolean"
+                },
                 "bg_opacity_mobile": {
                     "title": "Mobile BG Opacity",
                     "type": "string",
-                    "required": false
+                    "required": false,
+                    "dependencies": ["mobile_extra"]
+                },
+                "mobile_offset": {
+                    "title": "Mobile Hero Offset (in %)",
+                    "type": "number",
+                    "required": false,
+                    "dependencies": ["mobile_extra"]
+                },
+                "mobile_left_offset": {
+                    "title": "Mobile Hero Left Offset (in %)",
+                    "type": "number",
+                    "required": false,
+                    "dependencies": ["mobile_extra"]
                 },
                 "copy": {
                     "type": "array",
