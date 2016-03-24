@@ -18,6 +18,7 @@ $copy_color: '<%= COPY_COLOR %>'
 $offset: '<%= OFFSET %>'
 $m_offset: '<%= MOBILE_OFFSET %>'
 $m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
+$logo_width: '<%= LOGO_WIDTH %>'
 
 .feed-modules-eq-height
   position: relative
@@ -366,7 +367,7 @@ $m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
       img.sponsorlogo
         margin-top: 1em
         display: inline-block
-        width: 6em
+        width: #{$logo_width}em
         margin-left: auto
         margin-right: auto
         position: relative
