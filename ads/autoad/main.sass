@@ -19,6 +19,7 @@ $offset: '<%= OFFSET %>'
 $m_offset: '<%= MOBILE_OFFSET %>'
 $m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
 $logo_width: '<%= LOGO_WIDTH %>'
+$m_logo_width: '<%= LOGO_WIDTH + 1 %>'
 
 .feed-modules-eq-height
   position: relative
@@ -373,7 +374,7 @@ $logo_width: '<%= LOGO_WIDTH %>'
         position: relative
 
         @media screen and (max-width: $screen-xs)
-          width: 7em
+          width: #{$m_logo_width}em
 
 
   .ad-hero

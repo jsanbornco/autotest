@@ -1,17 +1,24 @@
 {
-    "title": "Testplate",
-    "slug": "test",
-    "theme": "image",
-    "id": "TestAd00000000",
-    "hero": "http://storyplate.imgix.net/ads/triscuit2/img/hero3.jpg?w=1440",
-    "copy": [
-        {
-            "main": "Test",
-            "cta": "Testclick"
-        },
-        {
-          "main": "Test2",
-          "cta": "Testclick2"
-        }
-    ]
+  "base_url": "//adtest.britcdn.com/auto/generic-sherwin/",
+  "title": "Sherwin-Williams",
+  "slug": "generic-sherwin",
+  "theme": "generic",
+  "id": "sherwin41816",
+  "image": "http://storyplate.imgix.net/ads/sherwin/img/hero_crop.jpg",
+  "offset": 37,
+  "logo": "http://storyplate.imgix.net/ads/sherwin/img/logo2.svg",
+  "logo_width": 4,
+  "bg_color": "#ffffff",
+  "mobile_extra": false,
+  "copy": [
+    {
+      "main": "FIND YOUR COLOR CONFIDENCE<span>with ColorSnap®</span>",
+      "cta": "TAKE A LOOK",
+      "cta_color": "#7ddcf2",
+      "secondary_cta": true,
+      "cta2": "SHOW ME HOW",
+      "cta2_color": "#eac7c4",
+      "dark": true
+    }
+  ]
 }
