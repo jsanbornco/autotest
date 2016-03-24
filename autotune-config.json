@@ -64,7 +64,8 @@
                 },
                 "hp_offset": {
                     "title": "Homepage Hero Offset (in px)",
-                    "type": "number"
+                    "type": "number",
+                    "dependencies": ["mobile_extra"]
                 },
                 "copy": {
                     "type": "array",
