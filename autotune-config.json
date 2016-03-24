@@ -41,7 +41,7 @@
                     "required": true
                 },
                 "mobile_extra": {
-                    "title": "Extra Mobile Options",
+                    "title": "Extra Options",
                     "type": "boolean"
                 },
                 "bg_opacity_mobile": {
@@ -61,6 +61,10 @@
                     "type": "number",
                     "required": false,
                     "dependencies": ["mobile_extra"]
+                },
+                "hp_offset": {
+                    "title": "Homepage Hero Offset (in px)",
+                    "type": "number"
                 },
                 "copy": {
                     "type": "array",

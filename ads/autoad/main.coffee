@@ -45,6 +45,7 @@ data = {
   OFFSET: options.offset or 17
   MOBILE_OFFSET: options.mobile_offset or 0
   MOBILE_LEFT_OFFSET: options.mobile_left_offset or 30
+  HOMEPAGE_OFFSET: options.hp_offset or 0
 
 
   CLICK_MACRO: window.clickmacro or ''
