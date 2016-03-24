@@ -35,7 +35,7 @@ data = {
   BUTTON2_COPY: options.copy[COPY_OPTION].cta2
   HERO_IMAGE_URL: options.image
   LOGO_URL: options.logo
-  LOGO_WIDTH: options.logo or 6
+  LOGO_WIDTH: options.logo_width or 6
   OVERLAY_COLOR: colorConvert(options.bg_color) or '255, 255, 255'
   OVERLAY_OPACITY_MOBILE: options.bg_opacity_mobile or '0.6'
   CTA_COLOR: colorConvert(options.copy[COPY_OPTION].cta_color) or '41, 48, 142'
