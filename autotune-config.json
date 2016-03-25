@@ -63,7 +63,7 @@
                     "dependencies": ["mobile_extra"]
                 },
                 "hp_offset": {
-                    "title": "Homepage Hero Offset (in px)",
+                    "title": "Homepage Hero Offset (in %)",
                     "type": "number",
                     "dependencies": ["mobile_extra"]
                 },
