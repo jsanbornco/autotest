@@ -164,8 +164,15 @@ $hp_offset: '<%= HOMEPAGE_OFFSET %>'
     @media screen and (min-width: $screen-md-max)
       margin-bottom: 38px
 
-    .ad-hero
+    .ad-hero-container
+      width: 100%
       position: absolute !important
+      bottom: 0
+      left: 0
+      background-color: #ff6f28
+      z-index: 0
+
+    .ad-hero
       margin-bottom: -#{$offset}% !important
 
       @media screen and (max-width: $screen-xs-max)

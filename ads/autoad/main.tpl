@@ -52,11 +52,13 @@
 
     </div>
 
-    <div class="ad-hero">
-      <div class="fixed-hero-container">
-        <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= CLICK_MACRO %>">
-          <img class="ad-hero-img" src="<%= HERO_IMAGE_URL %><%= HERO_IMAGE_ARGS %>" />
-        </a>
+    <div class="ad-hero-container">
+      <div class="ad-hero">
+        <div class="fixed-hero-container">
+          <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= CLICK_MACRO %>">
+            <img class="ad-hero-img" src="<%= HERO_IMAGE_URL %><%= HERO_IMAGE_ARGS %>" />
+          </a>
+        </div>
       </div>
     </div>
     <div class="placeholder">
