@@ -10,6 +10,7 @@
   "logo_width": 4,
   "bg_color": "#ffffff",
   "mobile_extra": false,
+  "anchor": false,
   "copy": [
     {
       "main": "FIND YOUR COLOR CONFIDENCE<span>with ColorSnap®</span>",

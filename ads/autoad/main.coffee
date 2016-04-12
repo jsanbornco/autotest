@@ -43,6 +43,7 @@ data = {
   COPY_COLOR: copy_color
   PRESENTED: presented
   OFFSET: options.offset or 17
+  ANCHOR: if options.anchor then 'top' else 'bottom'
   MOBILE_OFFSET: options.mobile_offset or 0
   MOBILE_LEFT_OFFSET: options.mobile_left_offset or 30
   HOMEPAGE_OFFSET: options.hp_offset or 0

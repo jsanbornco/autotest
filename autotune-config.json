@@ -67,6 +67,11 @@
                     "type": "number",
                     "dependencies": ["mobile_extra"]
                 },
+                "anchor": {
+                    "title": "Anchored to top?",
+                    "type": "boolean",
+                    "dependencies": ["mobile_extra"]
+                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",

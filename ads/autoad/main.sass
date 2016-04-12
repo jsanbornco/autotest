@@ -21,6 +21,7 @@ $m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
 $logo_width: '<%= LOGO_WIDTH %>'
 $m_logo_width: '<%= LOGO_WIDTH + 1 %>'
 $hp_offset: '<%= HOMEPAGE_OFFSET %>'
+$anchor: '<%= ANCHOR %>'
 
 .feed-modules-eq-height
   position: relative
@@ -173,7 +174,7 @@ $hp_offset: '<%= HOMEPAGE_OFFSET %>'
       z-index: 0
 
     .ad-hero
-      margin-bottom: -#{$offset}% !important
+      margin-#{$anchor}: -#{$offset}% !important
 
       @media screen and (max-width: $screen-xs-max)
         img
@@ -389,7 +390,7 @@ $hp_offset: '<%= HOMEPAGE_OFFSET %>'
   .ad-hero
     width: 100%
     position: absolute
-    bottom: 0
+    #{$anchor}: 0
     left: 0
     background-color: #ff6f28
     z-index: 0
