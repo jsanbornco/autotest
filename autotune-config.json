@@ -23,7 +23,8 @@
                 },
                 "offset": {
                     "title": "Hero Offset (in %)",
-                    "type": "number"
+                    "type": "number",
+                    "default": 17
                 },
                 "logo": {
                     "title": "Logo URL",
@@ -59,12 +60,14 @@
                 "mobile_left_offset": {
                     "title": "Mobile Hero Left Offset (in %)",
                     "type": "number",
+                    "default": 30,
                     "required": false,
                     "dependencies": ["mobile_extra"]
                 },
                 "mobile_scale": {
                     "title": "Mobile Hero Scale (in %)",
                     "type": "number",
+                    "default": 150,
                     "dependencies": ["mobile_extra"]
                 },
                 "hp_offset": {

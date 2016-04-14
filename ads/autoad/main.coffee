@@ -42,12 +42,12 @@ data = {
   CTA2_COLOR: colorConvert(options.copy[COPY_OPTION].cta2_color) or '41, 48, 142'
   COPY_COLOR: copy_color
   PRESENTED: presented
-  OFFSET: options.offset or 17
+  OFFSET: options.offset or 0
   ANCHOR: if options.anchor then 'top' else 'bottom'
   MOBILE_OFFSET: options.mobile_offset or 0
-  MOBILE_LEFT_OFFSET: options.mobile_left_offset or 30
+  MOBILE_LEFT_OFFSET: options.mobile_left_offset or 0
   HOMEPAGE_OFFSET: options.hp_offset or 0
-  MOBILE_SCALE: options.mobile_scale or 150
+  MOBILE_SCALE: options.mobile_scale or 0
 
 
   CLICK_MACRO: window.clickmacro or ''
