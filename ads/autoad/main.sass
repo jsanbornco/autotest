@@ -181,10 +181,10 @@ $anchor: '<%= ANCHOR %>'
         img
           left: -#{$m_left_offset}%
           position: absolute
-          bottom: #{$m_offset}%
+          #{$anchor}: #{$m_offset}%
 
       @media screen and (max-width: 766px)
-        margin-bottom: -24% !important
+        margin-#{$anchor}: -24% !important
 
 .home
 
