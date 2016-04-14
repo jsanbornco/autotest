@@ -62,6 +62,11 @@
                     "required": false,
                     "dependencies": ["mobile_extra"]
                 },
+                "mobile_scale": {
+                    "title": "Mobile Hero Scale (in %)",
+                    "type": "number",
+                    "dependencies": ["mobile_extra"]
+                },
                 "hp_offset": {
                     "title": "Homepage Hero Offset (in %)",
                     "type": "number",

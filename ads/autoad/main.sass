@@ -22,6 +22,7 @@ $logo_width: '<%= LOGO_WIDTH %>'
 $m_logo_width: '<%= LOGO_WIDTH + 1 %>'
 $hp_offset: '<%= HOMEPAGE_OFFSET %>'
 $anchor: '<%= ANCHOR %>'
+$m_scale: '<%= MOBILE_SCALE %>'
 
 .feed-modules-eq-height
   position: relative
@@ -182,9 +183,6 @@ $anchor: '<%= ANCHOR %>'
           left: -#{$m_left_offset}%
           position: absolute
           #{$anchor}: #{$m_offset}%
-
-      @media screen and (max-width: 766px)
-        margin-bottom: -24% !important
 
 .home
 
@@ -409,7 +407,7 @@ $anchor: '<%= ANCHOR %>'
 
       img
         height: auto
-        width: 150%
+        width: #{$m_scale}%
 
 .guide-single
 
