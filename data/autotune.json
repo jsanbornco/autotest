@@ -1,25 +1,25 @@
 {
-  "base_url": "//adtest.britcdn.com/auto/generic-sherwin/",
-  "title": "Sherwin-Williams",
-  "slug": "generic-sherwin",
+  "base_url": "//adtest.britcdn.com/auto/generic-neiman/",
+  "title": "Neiman",
+  "slug": "generic-neiman",
   "theme": "generic",
-  "id": "sherwin41816",
-  "image": "http://storyplate.imgix.net/ads/sherwin/img/hero_crop.jpg",
-  "offset": 37,
-  "logo": "http://storyplate.imgix.net/ads/sherwin/img/logo2.svg",
-  "logo_width": 4,
-  "bg_color": "#ffffff",
-  "mobile_extra": false,
-  "anchor": false,
+  "id": "neiman41916",
+  "image": "https://storyplate.imgix.net/ads/neiman/img/hero3.jpg",
+  "offset": 1,
+  "logo": "https://storyplate.imgix.net/ads/neiman/img/logo.png",
+  "bg_color": "#fe6fad",
+  "mobile_extra": true,
+  "mobile_left_offset": 0,
+  "mobile_scale": 100,
+  "hp_offset": 30,
+  "anchor": true,
   "copy": [
     {
-      "main": "FIND YOUR COLOR CONFIDENCE<span>with ColorSnap®</span>",
+      "main": "Rock Spring's Hottest Trends on Any Budget",
       "cta": "TAKE A LOOK",
-      "cta_color": "#7ddcf2",
-      "secondary_cta": true,
-      "cta2": "SHOW ME HOW",
-      "cta2_color": "#eac7c4",
-      "dark": true
+      "cta_color": "#8de3d6",
+      "secondary_cta": false,
+      "dark": false
     }
   ]
 }

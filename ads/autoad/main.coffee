@@ -47,7 +47,7 @@ data = {
   MOBILE_OFFSET: options.mobile_offset or 0
   MOBILE_LEFT_OFFSET: options.mobile_left_offset or 0
   HOMEPAGE_OFFSET: options.hp_offset or 0
-  MOBILE_SCALE: options.mobile_scale or 0
+  MOBILE_SCALE: options.mobile_scale or 150
 
 
   CLICK_MACRO: window.clickmacro or ''
@@ -111,6 +111,7 @@ render
             hero.style.bottom = "auto"
             hero.style.marginBottom = "auto"
           else
+
             hero.style.position = "fixed"
             hero.style.top = "auto"
             hero.style.bottom = "0"
