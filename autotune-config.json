@@ -80,6 +80,16 @@
                     "type": "boolean",
                     "dependencies": ["mobile_extra"]
                 },
+                "banner_color": {
+                    "title": "Top Banner Color",
+                    "type": "color",
+                    "dependencies": ["mobile_extra"]
+                },
+                "banner_cta_color": {
+                    "title": "Top Banner CTA Color",
+                    "type": "color",
+                    "dependencies": ["mobile_extra"]
+                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",

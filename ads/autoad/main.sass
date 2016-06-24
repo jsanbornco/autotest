@@ -11,8 +11,11 @@ $overlay_color: 'rgba(<%= OVERLAY_COLOR %>, 0.8)'
 $overlay_color_mobile: 'rgba(<%= OVERLAY_COLOR %>, <%= OVERLAY_OPACITY_MOBILE %>)'
 $overlay_color_solid: 'rgb(<%= OVERLAY_COLOR %>)'
 
+$banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
+
 $cta_color: 'rgb(<%= CTA_COLOR %>)'
 $cta2_color: 'rgb(<%= CTA2_COLOR %>)'
+$banner_cta_color: 'rgb(<%= BANNER_CTA_COLOR %>)'
 
 $copy_color: '<%= COPY_COLOR %>'
 $offset: '<%= OFFSET %>'
@@ -63,7 +66,7 @@ $m_scale: '<%= MOBILE_SCALE %>'
     position: absolute
     top: 0
     left: 0
-    background-color: #{$overlay_color}
+    background-color: #{$banner_color}
 
   .banner-logo
     display: none
@@ -135,8 +138,8 @@ $m_scale: '<%= MOBILE_SCALE %>'
       font-size: 0.8em
       cursor: pointer
       position: relative
-      border-top: 12px solid #{$cta_color}
-      border-bottom: 12px solid #{$cta_color}
+      border-top: 12px solid #{$banner_cta_color}
+      border-bottom: 12px solid #{$banner_cta_color}
       border-left: 10px solid transparent
       border-right: 10px solid transparent
       display: inline-block
