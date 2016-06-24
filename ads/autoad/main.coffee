@@ -41,7 +41,7 @@ data = {
   OVERLAY_OPACITY_MOBILE: options.bg_opacity_mobile or '0.6'
   CTA_COLOR: colorConvert(options.copy[COPY_OPTION].cta_color) or '41, 48, 142'
   CTA2_COLOR: colorConvert(options.copy[COPY_OPTION].cta2_color) or '41, 48, 142'
-  BANNER_CTA_COLOR: colorConvert(options.banner_cta_color) or colorConvert(options.copy[COPY_OPTION].cta2_color) or '255, 255, 255'
+  BANNER_CTA_COLOR: colorConvert(options.banner_cta_color) or colorConvert(options.copy[COPY_OPTION].cta_color) or '255, 255, 255'
   COPY_COLOR: copy_color
   PRESENTED: presented
   OFFSET: options.offset or 0
