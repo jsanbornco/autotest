@@ -88,9 +88,13 @@ render
         </a>
       </div>
       """
-    page = top.document.getElementById('page')
+    page = top.document.getElementById('page') || top.document.querySelector('.modern > body > div > nav')
+    if not page
+      page = top.document.getElementsByClassName('guide-single')
+      page = page[0] if page.length > 0
+
     home = true if top.document.body.className.match('home')
-    page.appendChild(banner)
+    page.appendChild(banner) if page? and page.appendChild
 
     hero = element.getElementsByClassName('fixed-hero-container')[0]
     elBottom = element.getBoundingClientRect().bottom + top.scrollY
