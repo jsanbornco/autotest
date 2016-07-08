@@ -72,32 +72,12 @@ render
   data: data
   maximize: true
   (err, element, data) ->
-    banner.innerHTML = """
-      <div class="cta-watch">
-        <a id="storyplate-#{data.AD_ID}-banner-bg-redirect" target="_blank" href="#{data.CLICK_MACRO}">
-          <div class="banner-overlay"></div>
-        </a>
-
-        <a id="storyplate-#{data.AD_ID}-banner-tagline-redirect" target="_blank" href="#{data.CLICK_MACRO}">
-          <div>
-            <h3>#{options.copy[COPY_OPTION].main}</h3>
-          </div>
-        </a>
-        <a id="storyplate-#{data.AD_ID}-banner-cta-redirect" href="#{data.CLICK_MACRO}" class="cta" target="_blank">
-          #{options.copy[COPY_OPTION].cta}
-        </a>
-      </div>
-      """
-    page = top.document.getElementById('page') || top.document.querySelector('.modern > body > div > nav')
-    if not page
-      page = top.document.getElementsByClassName('guide-single')
-      page = page[0] if page.length > 0
+    bannerInit = require "../../scripts/banner.coffee"
+    banner = bannerInit element, data, options
 
     home = true if top.document.body.className.match('home')
-    page.appendChild(banner) if page? and page.appendChild
 
     hero = element.getElementsByClassName('fixed-hero-container')[0]
-    elBottom = element.getBoundingClientRect().bottom + top.scrollY
     elTop = element.offsetTop
 
     heroTop = false
@@ -121,11 +101,3 @@ render
             hero.style.position = "fixed"
             hero.style.top = "auto"
             hero.style.bottom = "0"
-
-      unless home
-        if this.scrollY >= elBottom
-          paused = true
-          banner.className = "storyplate-top-banner storyplate show-banner"
-        else if paused
-          paused = false
-          banner.className = "storyplate-top-banner storyplate"
