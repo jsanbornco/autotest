@@ -29,8 +29,8 @@ else
   presented = "presented-by.svg"
   copy_color = '#fff'
 
-options.banner_cta_color = false if options.banner_cta_color == "#000001"
-options.banner_color = false if options.banner_color == "#000001"
+options.banner_cta_color = false if options.banner_cta_color == "#000000"
+options.banner_color = false if options.banner_color == "#000000"
 
 
 data = {
@@ -62,6 +62,8 @@ data = {
   AD_ID: options.id
 }
 
+if (data.BANNER_COLOR.match(/#[fF]{6}/))
+  data.BANNER_COLOR = "#F0F0F0"
 
 
 

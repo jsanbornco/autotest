@@ -84,13 +84,13 @@
                     "title": "Top Banner Color",
                     "type": "color",
                     "dependencies": ["mobile_extra"],
-                    "default": "#000001"
+                    "default": "#ffffff"
                 },
                 "banner_cta_color": {
                     "title": "Top Banner CTA Color",
                     "type": "color",
                     "dependencies": ["mobile_extra"],
-                    "default": "#000001"
+                    "default": "#ffffff"
                 },
                 "copy": {
                     "type": "array",
