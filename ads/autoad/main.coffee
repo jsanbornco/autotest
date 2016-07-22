@@ -29,6 +29,10 @@ else
   presented = "presented-by.svg"
   copy_color = '#fff'
 
+options.banner_cta_color = false if options.banner_cta_color == "#000001"
+options.banner_color = false if options.banner_color == "#000001"
+
+
 data = {
   OVERLAY_COPY: options.copy[COPY_OPTION].main
   BUTTON_COPY: options.copy[COPY_OPTION].cta
