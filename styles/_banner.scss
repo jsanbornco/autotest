@@ -5,3 +5,147 @@
     top: 100%;
   }
 }
+
+.storyplate-top-banner {
+  transition: height 0.2s, padding 0.2s;
+  z-index: 5;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 59px;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media screen and (max-width: $screen-xs-max) {
+    background-size: auto 100%;
+    top: 44px;
+
+    .banner-logo {
+      display: none;
+    }
+  }
+
+  &.show-banner {
+    height: 60px !important;
+    @media screen and (max-width: $screen-xs-max) {
+      height: 40px !important;
+    }
+  }
+  .banner-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #{$banner_color};
+  }
+  .banner-logo {
+    display: none;
+    @media screen and (max-width: $screen-xs-max) {
+      display: none;
+    }
+  }
+
+  .cta-watch {
+    padding-top: 30px;
+    margin-top: -0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (max-width: $screen-xs-max) {
+      text-align: right;
+      padding-top: 0;
+      margin-top: 0;
+      height: 100%;
+    }
+
+    div {
+      display: inline;
+
+      @media screen and (max-width: $screen-xs-max) {
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    h3 {
+      color: $banner_title_color;
+      position: relative;
+      font-size: 1.2em;
+      z-index: 10;
+      text-align: center;
+      display: inline-block;
+      font-weight: 100;
+      margin-right: 20px;
+      letter-spacing: 0.1em;
+      vertical-align: top;
+      line-height: 1;
+      @media screen and (max-width: $screen-md-max) {
+        font-size: 1em;
+      }
+
+      @media screen and (max-width: $screen-xs-max) {
+        -webkit-align-self: center;
+        align-self: center;
+        font-size: 15px;
+        width: 70%;
+        margin-left: 20px;
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: 550px) {
+        font-size: 0.6em;
+        line-height: 1.3em;
+        font-weight: 500;
+        width: 50%;
+      }
+
+      span {
+        display: none;
+      }
+    }
+    .cta {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      padding: 0 1em;
+      font-size: 0.8em;
+      cursor: pointer;
+      position: relative;
+      border-top: 12px solid #{$banner_cta_color};
+      border-bottom: 12px solid #{$banner_cta_color};
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      display: inline-block;
+      line-height: 0;
+      top: -0.3em;
+      color: $banner_cta_text_color;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      span {
+        position: relative;
+        line-height: 0;
+        top: 0.1em;
+      }
+
+      @media screen and (max-width: $screen-xs-max) {
+        position: absolute;
+        bottom: 8px;
+        top: auto;
+        right: 1em;
+        margin: 0;
+        font-size: 0.6em;
+        vertical-align: bottom;
+      }
+    }
+  }
+}

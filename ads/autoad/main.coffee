@@ -62,8 +62,8 @@ data = {
   AD_ID: options.id
 }
 
-if (data.BANNER_COLOR.match(/#[fF]{6}/))
-  data.BANNER_COLOR = "#F0F0F0"
+if (data.BANNER_COLOR == '255,255,255')
+  data.BANNER_COLOR = "240, 240, 240"
 
 
 
