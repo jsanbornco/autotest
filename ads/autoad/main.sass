@@ -64,9 +64,7 @@ $banner_title_color: #{$copy_color}
 
       @media screen and (max-width: $screen-xs-max)
         img
-          left: -#{$m_left_offset}%
           position: absolute
-          #{$anchor}: #{$m_offset}%
 
 .home
 
@@ -293,6 +291,9 @@ $banner_title_color: #{$copy_color}
       img
         height: auto
         width: #{$m_scale}%
+        left: -#{$m_left_offset}%
+        #{$anchor}: #{$m_offset}%
+
 
 .guide-single
 
