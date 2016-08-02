@@ -287,12 +287,14 @@ $banner_title_color: #{$copy_color}
     @media screen and (max-width: $screen-xs-max)
       width: 100%
       height: 100%
+      margin-#{$anchor}: -#{$offset}% !important
 
       img
         height: auto
         width: #{$m_scale}%
         left: -#{$m_left_offset}%
         #{$anchor}: #{$m_offset}%
+        position: absolute
 
 
 .guide-single
