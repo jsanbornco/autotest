@@ -29,6 +29,11 @@ else
   presented = "presented-by.svg"
   copy_color = '#fff'
 
+if options.copy[COPY_OPTION].darkcta
+  cta_copy_color = '#525252'
+else
+  cta_copy_color = '#fff'
+
 options.banner_cta_color = false if options.banner_cta_color == "#000000"
 options.banner_color = false if options.banner_color == "#000000"
 
@@ -47,6 +52,7 @@ data = {
   CTA2_COLOR: colorConvert(options.copy[COPY_OPTION].cta2_color) or '41, 48, 142'
   BANNER_CTA_COLOR: colorConvert(options.banner_cta_color) or colorConvert(options.copy[COPY_OPTION].cta_color) or '255, 255, 255'
   COPY_COLOR: copy_color
+  CTA_COPY_COLOR: cta_copy_color
   PRESENTED: presented
   OFFSET: options.offset or 0
   ANCHOR: if options.anchor then 'top' else 'bottom'

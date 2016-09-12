@@ -19,6 +19,7 @@ $cta2_color: 'rgb(<%= CTA2_COLOR %>)'
 $banner_cta_color: 'rgb(<%= BANNER_CTA_COLOR %>)'
 
 $copy_color: '<%= COPY_COLOR %>'
+$cta_copy_color: '<%= CTA_COPY_COLOR %>'
 $offset: '<%= OFFSET %>'
 $m_offset: '<%= MOBILE_OFFSET %>'
 $m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
@@ -185,7 +186,7 @@ $banner_title_color: #{$copy_color}
 
     a.cta-read
       position: relative
-      color: white
+      color: #{$cta_copy_color}
       display: inline-block
       line-height: 0
       text-align: center

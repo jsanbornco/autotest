@@ -130,7 +130,11 @@
                                 "dependencies": ["secondary_cta"]
                             },
                             "dark": {
-                                "title": "Dark Text?",
+                                "title": "Dark Title Copy",
+                                "type": "boolean"
+                            },
+                            "darkcta": {
+                                "title": "Dark CTA Copy",
                                 "type": "boolean"
                             }
                         }
