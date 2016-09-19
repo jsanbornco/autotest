@@ -90,7 +90,11 @@ $banner_title_color: #{$copy_color}
       img
         backface-visibility: hidden
 
-
+@keyframes fade_img
+  from
+    opacity: 0
+  to
+    opacity: 1
 
 .homepage-ad-video
 
@@ -290,11 +294,12 @@ $banner_title_color: #{$copy_color}
       top: 0
       left: 0
       opacity: 0
-      transition: opacity 3s
       z-index: 1
 
     &.ad-hero-fade .ad-hero-fade-img
-      opacity: 1
+      animation-name: fade_img
+      animation-delay: 500ms
+      animation-duration: 4s
 
     @media screen and (max-width: $screen-xs-max)
       width: 100%
