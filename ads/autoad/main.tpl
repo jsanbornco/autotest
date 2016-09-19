@@ -57,6 +57,9 @@
         <div class="fixed-hero-container">
           <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= CLICK_MACRO %>">
             <img class="ad-hero-img" src="<%= HERO_IMAGE_URL %><%= HERO_IMAGE_ARGS %>" />
+            <% if (FADE_URL !== undefined && FADE_URL !== '') { %>
+              <img class="ad-hero-fade-img" src="<%= FADE_URL %><%= HERO_IMAGE_ARGS %>" />
+            <% } %>
           </a>
         </div>
       </div>

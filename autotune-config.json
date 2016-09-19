@@ -80,6 +80,15 @@
                     "type": "boolean",
                     "dependencies": ["mobile_extra"]
                 },
+                "experimental": {
+                    "title": "Experiental Features",
+                    "type": "boolean"
+                },
+                "fade_url": {
+                    "title": "Fade to Image",
+                    "type": "string",
+                    "dependencies": ["experimental"]
+                },
                 "banner_color": {
                     "title": "Top Banner Color",
                     "type": "color",

@@ -60,6 +60,7 @@ data = {
   MOBILE_LEFT_OFFSET: options.mobile_left_offset or 0
   HOMEPAGE_OFFSET: options.hp_offset or 0
   MOBILE_SCALE: options.mobile_scale or 150
+  FADE_URL: options.fade_url or ''
 
 
   CLICK_MACRO: window.clickmacro or ''
