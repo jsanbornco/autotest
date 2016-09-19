@@ -287,11 +287,13 @@ $banner_title_color: #{$copy_color}
 
     .ad-hero-fade-img
       position: absolute
+      top: 0
+      left: 0
       opacity: 0
-      transition: opacity 1s
+      transition: opacity 3s
       z-index: 1
 
-    & .ad-hero-fade-img
+    &.ad-hero-fade .ad-hero-fade-img
       opacity: 1
 
     @media screen and (max-width: $screen-xs-max)
