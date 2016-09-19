@@ -54,9 +54,9 @@
 
     <div class="ad-hero-container">
       <% if (FADE_URL !== undefined && FADE_URL !== '') { %>
-      <div class="ad-hero">
-      <% } else { %>
       <div class="ad-hero ad-hero-fade">
+      <% } else { %>
+      <div class="ad-hero">
       <% } %>
         <div class="fixed-hero-container">
           <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= CLICK_MACRO %>">
