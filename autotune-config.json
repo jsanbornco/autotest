@@ -81,7 +81,7 @@
                     "dependencies": ["mobile_extra"]
                 },
                 "experimental": {
-                    "title": "Experiental Features",
+                    "title": "Experimental Features",
                     "type": "boolean"
                 },
                 "fade_url": {
@@ -111,6 +111,12 @@
                                 "title": "Main Copy",
                                 "type": "string",
                                 "required": true
+                            },
+                            "banner": {
+                                "title": "Banner Copy",
+                                "type": "string",
+                                "required": false,
+                                "default" : ""
                             },
                             "cta": {
                                 "title": "CTA Copy",

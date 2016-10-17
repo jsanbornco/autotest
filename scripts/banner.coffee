@@ -2,23 +2,42 @@ module.exports = (element, data, options) ->
   banner = top.document.createElement('div')
   banner.className = 'storyplate-top-banner storyplate'
 
-  banner.innerHTML = """
-    <div class="cta-watch">
-      <a id="storyplate-#{data.AD_ID}-banner-bg-redirect" target="_blank" href="#{data.CLICK_MACRO}">
-        <div class="banner-overlay"></div>
-      </a>
+  if (data.BANNER_COPY != "")
+    banner.className = 'storyplate-top-banner storyplate-text-banner storyplate'
+    banner.innerHTML = """
+      <div class="cta-watch">
+          <a id="storyplate-#{data.AD_ID}-banner-bg-redirect" target="_blank" href="#{data.CLICK_MACRO}">
+            <div class="banner-overlay"></div>
+          </a>
 
-      <a id="storyplate-#{data.AD_ID}-banner-tagline-redirect" target="_blank" href="#{data.CLICK_MACRO}">
-        <div>
-          <h3>#{data.OVERLAY_COPY}</h3>
+          <a id="storyplate-#{data.AD_ID}-banner-tagline-redirect" target="_blank" href="#{data.CLICK_MACRO}">
+            <div>
+              <img src="#{data.STATIC_URL}/img/logo.svg">
+              <h3>#{data.BANNER_COPY}</h3>
+              <span class="icon-ui-rightarrow"></span>
+            </div>
+          </a>
         </div>
-      </a>
+      """
+  else
+    banner.className = 'storyplate-top-banner storyplate'
+    banner.innerHTML = """
+      <div class="cta-watch">
+        <a id="storyplate-#{data.AD_ID}-banner-bg-redirect" target="_blank" href="#{data.CLICK_MACRO}">
+          <div class="banner-overlay"></div>
+        </a>
 
-      <a id="storyplate-#{data.AD_ID}-banner-cta-redirect" href="#{data.CLICK_MACRO}" class="cta" target="_blank">
-        <span>#{data.BUTTON_COPY}</span>
-      </a>
-    </div>
-    """
+        <a id="storyplate-#{data.AD_ID}-banner-tagline-redirect" target="_blank" href="#{data.CLICK_MACRO}">
+          <div>
+            <h3>#{data.OVERLAY_COPY}</h3>
+          </div>
+        </a>
+
+        <a id="storyplate-#{data.AD_ID}-banner-cta-redirect" href="#{data.CLICK_MACRO}" class="cta" target="_blank">
+          <span>#{data.BUTTON_COPY}</span>
+        </a>
+      </div>
+      """
 
   page = top.document.getElementById('page') || top.document.querySelector('.modern > body > div > nav')
   if not page

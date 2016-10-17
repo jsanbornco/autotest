@@ -150,3 +150,60 @@
     }
   }
 }
+
+div.storyplate-text-banner {
+  .cta-watch {
+    height: 100%;
+    padding-top: 0;
+    margin-top: 0;
+
+    div {
+      display: -webkit-flex;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      margin: 0.2em 0.3em 0 0.5em;
+      font-size: 1em;
+    }
+
+    img {
+      height: 1.5em;
+      position: relative;
+    }
+  }
+
+  .icon-ui-rightarrow {
+    position: relative;
+    line-height: 0;
+    vertical-align: middle;
+    font-size: 1.8em;
+    color: $banner_title_color;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    img {
+      display: none;
+    }
+
+    .cta-watch {
+      div {
+        justify-content: center;
+      }
+
+      h3 {
+        width: auto;
+        font-size: 0.9em;
+        margin: 0.2em 0.3em 0 0;
+      }
+
+      .icon-ui-rightarrow {
+        align-self: center;
+      }
+    }
+  }
+}
