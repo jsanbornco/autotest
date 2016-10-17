@@ -1,9 +1,8 @@
 module.exports = (element, data, options) ->
   banner = top.document.createElement('div')
-  banner.className = 'storyplate-top-banner storyplate'
 
   if (data.BANNER_COPY != "")
-    banner.className = 'storyplate-top-banner storyplate-text-banner storyplate'
+    bannerClass = 'storyplate-top-banner storyplate-text-banner storyplate'
     banner.innerHTML = """
       <div class="cta-watch">
           <a id="storyplate-#{data.AD_ID}-banner-bg-redirect" target="_blank" href="#{data.CLICK_MACRO}">
@@ -20,7 +19,7 @@ module.exports = (element, data, options) ->
         </div>
       """
   else
-    banner.className = 'storyplate-top-banner storyplate'
+    bannerClass = 'storyplate-top-banner storyplate'
     banner.innerHTML = """
       <div class="cta-watch">
         <a id="storyplate-#{data.AD_ID}-banner-bg-redirect" target="_blank" href="#{data.CLICK_MACRO}">
@@ -38,6 +37,9 @@ module.exports = (element, data, options) ->
         </a>
       </div>
       """
+
+  banner.className = bannerClass
+
 
   page = top.document.getElementById('page') || top.document.querySelector('.modern > body > div > nav')
   if not page
@@ -59,9 +61,9 @@ module.exports = (element, data, options) ->
 
       if this.scrollY >= elBottom
         paused = true
-        banner.className = "storyplate-top-banner storyplate show-banner"
+        banner.className = bannerClass + "show-banner"
       else if paused
         paused = false
-        banner.className = "storyplate-top-banner storyplate"
+        banner.className = bannerClass
 
   return banner
