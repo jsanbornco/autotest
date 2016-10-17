@@ -11,7 +11,7 @@ module.exports = (element, data, options) ->
 
           <a id="storyplate-#{data.AD_ID}-banner-tagline-redirect" target="_blank" href="#{data.CLICK_MACRO}">
             <div>
-              <img src="#{data.STATIC_URL}/img/logo.svg">
+              <img src="#{data.LOGO_URL}">
               <h3>#{data.BANNER_COPY}</h3>
               <span class="icon-ui-rightarrow"></span>
             </div>
