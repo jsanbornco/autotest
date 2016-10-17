@@ -61,7 +61,7 @@ module.exports = (element, data, options) ->
 
       if this.scrollY >= elBottom
         paused = true
-        banner.className = bannerClass + "show-banner"
+        banner.className = bannerClass + " show-banner"
       else if paused
         paused = false
         banner.className = bannerClass
