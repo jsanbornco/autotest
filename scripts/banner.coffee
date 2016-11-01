@@ -41,7 +41,7 @@ module.exports = (element, data, options) ->
   banner.className = bannerClass
 
 
-  page = top.document.getElementById('page') || top.document.querySelector('.modern > body > div > nav')
+  page = top.document.getElementById('page') || top.document.querySelector('.modern:not(.modern-home) > body > div > nav')
   if not page
     page = top.document.getElementsByClassName('guide-single')
     page = page[0] if page.length > 0
@@ -57,7 +57,8 @@ module.exports = (element, data, options) ->
     unless home
       if (not replaced and banner.parentElement == null)
         replace = true
-        page.appendChild(banner)
+        if page.length > 0
+          page.appendChild(banner)
 
       if this.scrollY >= elBottom
         paused = true
