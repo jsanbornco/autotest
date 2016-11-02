@@ -103,7 +103,7 @@
                 },
                 "legal": {
                     "title": "Legal Copy",
-                    "type": "text",
+                    "type": "string",
                     "dependencies": ["mobile_extra"],
                     "default": ""
                 },
