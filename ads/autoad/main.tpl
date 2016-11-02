@@ -50,6 +50,12 @@
       </div>
       <% } %>
 
+      <% if (LEGAL_COPY !== undefined && LEGAL_COPY !== '') { %>
+        <span class="ad-legal">
+          <%= LEGAL_COPY %>
+        </span>
+      <% } %>
+
     </div>
 
     <div class="ad-hero-container">

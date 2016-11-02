@@ -62,6 +62,7 @@ data = {
   HOMEPAGE_OFFSET: options.hp_offset or 0
   MOBILE_SCALE: options.mobile_scale or 150
   FADE_URL: options.fade_url or ''
+  LEGAL_COPY: options.legal or ""
 
 
   CLICK_MACRO: window.clickmacro or ''

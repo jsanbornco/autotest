@@ -101,6 +101,12 @@
                     "dependencies": ["mobile_extra"],
                     "default": "#ffffff"
                 },
+                "legal": {
+                    "title": "Legal Copy",
+                    "type": "text",
+                    "dependencies": ["mobile_extra"],
+                    "default": ""
+                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",
