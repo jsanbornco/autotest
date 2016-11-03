@@ -57,7 +57,7 @@ module.exports = (element, data, options) ->
     unless home
       if (not replaced and banner.parentElement == null)
         replace = true
-        if page and page.hasOwnProperty('appendChild')
+        if page and typeof page.appendChild == "function"
           page.appendChild(banner)
 
       if this.scrollY >= elBottom
