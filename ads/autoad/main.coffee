@@ -65,8 +65,10 @@ data = {
   LEGAL_COPY: options.legal or ""
 
 
+
   CLICK_MACRO: window.clickmacro or ''
   CLICK_MACRO_2: window.clickmacro2 or ''
+  BG_MACRO: window.backgroundmacro or window.clickmacro
 
   AD_ID: options.id
 }
