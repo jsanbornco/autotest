@@ -30,10 +30,10 @@
     <% } %>
 
     <div class="text-overlay">
-      <a id="storyplate-<%= AD_ID %>-textbg-redirect" target="_blank" href="<%= CLICK_MACRO %>">
+      <a id="storyplate-<%= AD_ID %>-textbg-redirect" target="_blank" href="<%= BG_MACRO %>">
         <div class="text-bg"></div>
       </a>
-      <a id="storyplate-<%= AD_ID %>-tagline-redirect" target="_blank" href="<%= CLICK_MACRO %>">
+      <a id="storyplate-<%= AD_ID %>-tagline-redirect" target="_blank" href="<%= BG_MACRO %>">
         <h1 id="storyplate-tagline"><%= OVERLAY_COPY %></h1>
       </a>
       <a class="cta-read" id="storyplate-<%= AD_ID %>-cta-redirect" href="<%= CLICK_MACRO %>" target="_blank"><%= BUTTON_COPY %></a>
@@ -65,7 +65,7 @@
       <div class="ad-hero">
       <% } %>
         <div class="fixed-hero-container">
-          <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= CLICK_MACRO %>">
+          <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= BG_MACRO %>">
             <img class="ad-hero-img" src="<%= HERO_IMAGE_URL %><%= HERO_IMAGE_ARGS %>" />
             <% if (FADE_URL !== undefined && FADE_URL !== '') { %>
               <img class="ad-hero-fade-img" src="<%= FADE_URL %><%= HERO_IMAGE_ARGS %>" />
