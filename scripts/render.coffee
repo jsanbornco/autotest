@@ -37,7 +37,7 @@ render = (opts={}, callback) ->
 
   rootDoc = rootWin.document
 
-  opts = _.defaults(_.clone(opts), maximize: true)
+  opts = _.defaults(_.clone(opts))
 
   # Convert cb function into a string
   opts.script = if opts.script? then '(' + opts.script.toString() + ')();' else '';
@@ -107,11 +107,6 @@ render = (opts={}, callback) ->
 
       dfpContainer = getDFPContainer(frameElement)
       dfpContainer.parentNode.insertBefore(clone, dfpContainer)
-
-      # If maximize is true, then expand ad to the full size of the vp..
-      if opts.maximize is true
-        maximus = require 'maximus'
-        maximus(clone)
 
       callback(null, clone, data)
 
