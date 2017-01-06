@@ -40,6 +40,7 @@ options.banner_color = false if options.banner_color == "#000000"
 
 data = {
   OVERLAY_COPY: options.copy[COPY_OPTION].main
+  OVERLAY_COPY_WEIGHT: if options.copy[COPY_OPTION].bold then '600' else '400'
   BUTTON_COPY: options.copy[COPY_OPTION].cta
   BUTTON2_COPY: options.copy[COPY_OPTION].cta2
   HERO_IMAGE_URL: options.image

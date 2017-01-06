@@ -118,6 +118,10 @@
                                 "type": "string",
                                 "required": true
                             },
+                            "bold": {
+                                "title": "Bold",
+                                "type": "boolean"
+                            },
                             "banner": {
                                 "title": "Banner Copy",
                                 "type": "string",
