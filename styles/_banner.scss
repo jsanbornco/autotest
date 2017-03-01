@@ -8,6 +8,8 @@
 }
 
 .storyplate-top-banner {
+  display: flex;
+  align-items: center;
   transition: height 0.2s, padding 0.2s;
   z-index: 5;
   height: 0;
@@ -48,8 +50,8 @@
   }
 
   .cta-watch {
-    padding-top: 30px;
-    margin-top: -0.5em;
+    padding-top: 0;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -125,8 +127,9 @@
       border-right: 10px solid transparent;
       display: inline-block;
       line-height: 0;
-      top: -0.3em;
+      top: 0;
       color: $banner_cta_text_color;
+      margin-top: -3px;
 
       &:hover {
         text-decoration: none;
