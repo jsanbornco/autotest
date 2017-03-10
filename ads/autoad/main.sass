@@ -29,6 +29,7 @@ $m_logo_width: '<%= LOGO_WIDTH + 1 %>'
 $hp_offset: '<%= HOMEPAGE_OFFSET %>'
 $anchor: '<%= ANCHOR %>'
 $m_scale: '<%= MOBILE_SCALE %>'
+$banner_logo: '<%= BANNER_LOGO %>'
 
 $banner_cta_text_color: #{$cta_copy_color}
 $banner_title_color: #{$copy_color}
@@ -264,13 +265,17 @@ $banner_title_color: #{$copy_color}
         width: 15em
         height: 2.2em
 
-      img.sponsorlogo
+      .sponsorlogo
         margin-top: 1em
         display: inline-block
         width: #{$logo_width}em
         margin-left: auto
         margin-right: auto
         position: relative
+
+      span.sponsorlogo
+        margin-top: 0.5em
+        font-size: 2em
 
         @media screen and (max-width: $screen-xs)
           width: #{$m_logo_width}em

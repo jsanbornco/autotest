@@ -43,10 +43,17 @@
       <% } %>
 
 
-      <% if (LOGO_URL !== undefined && LOGO_URL !== '') { %>
+      <% if ((LOGO_URL !== undefined && LOGO_URL !== '') && LOGO_COPY === '') { %>
       <div class="sponsor">
         <img class="storyplate-presented" src="<%= STATIC_URL %>/img/<%= PRESENTED %>" />
         <img src="<%= LOGO_URL %>" class="sponsorlogo">
+      </div>
+      <% } %>
+
+      <% if (LOGO_COPY !== undefined && LOGO_COPY !== '') { %>
+      <div class="sponsor">
+        <img class="storyplate-presented" src="<%= STATIC_URL %>/img/<%= PRESENTED %>" />
+        <span class="sponsorlogo"><%= LOGO_URL %></span>
       </div>
       <% } %>
 

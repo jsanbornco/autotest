@@ -31,6 +31,19 @@
                     "type": "string",
                     "required": false
                 },
+                "logocopy": {
+                    "title": "Logo Copy",
+                    "type": "string",
+                    "required": false,
+                    "dependencies": ["mobile_extra"]
+                },
+                "bannerlogo": {
+                    "title": "Logo in Banner? (desktop)",
+                    "type": "boolean",
+                    "required": false,
+                    "default": true,
+                    "dependencies": ["mobile_extra"]
+                },
                 "logo_width": {
                     "title": "Logo Width (in em)",
                     "type": "number",
