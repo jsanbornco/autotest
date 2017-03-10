@@ -175,7 +175,7 @@ div.storyplate-text-banner {
     }
 
     img {
-      display: #{$banner_logo}
+      display: #{$banner_logo};
       height: 1.5em;
       position: relative;
     }
