@@ -95,7 +95,7 @@ render
     bannerInit = require "../../scripts/banner.coffee"
     banner = bannerInit element, data, options
 
-    home = true if top.document.body.className.match('home')
+    home = true if top.document.documentElement.className.match('home') or top.document.body.className.match('home')
 
     hero = element.getElementsByClassName('fixed-hero-container')[0]
     elTop = element.offsetTop
