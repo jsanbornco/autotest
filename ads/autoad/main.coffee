@@ -66,6 +66,7 @@ data = {
   MOBILE_SCALE: options.mobile_scale or 150
   FADE_URL: options.fade_url or ''
   LEGAL_COPY: options.legal or ""
+  LEGAL_SIZE: options.legal_size or "0.4"
 
 
 

@@ -120,6 +120,12 @@
                     "dependencies": ["mobile_extra"],
                     "default": ""
                 },
+                "legal_size": {
+                    "title": "Legal Copy Font Size (in em)",
+                    "type": "string",
+                    "dependencies": ["mobile_extra"],
+                    "default": "0.4"
+                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",
