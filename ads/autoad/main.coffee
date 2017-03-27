@@ -39,16 +39,16 @@ options.banner_color = false if options.banner_color == "#000000"
 
 bg_floats = []
 overlay_floats = []
-for (el in options.floating_element)
+for el in options.floating_element
   el.style = ""
   placement = {}
 
-  if (el.position == 0 or el.position == 2)
+  if el.position == 0 or el.position == 2
     placement.v = "top"
   else
     placement.v = "bottom"
 
-  if (el.position == 0 or el.position == 1)
+  if el.position == 0 or el.position == 1
     placement.h = "left"
   else
     placement.h = "right"
@@ -56,7 +56,7 @@ for (el in options.floating_element)
   horizontal = el.horizontal or 0
   vertical = el.vertical or 0
 
-  if (el.background)
+  if el.background
     bg_floats.push(el)
   else
     overlay_floats.push(el)
