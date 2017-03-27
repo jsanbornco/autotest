@@ -63,6 +63,19 @@
         </span>
       <% } %>
 
+      <% if (OVERLAY_FLOATS !== undefined && OVERLAY_FLOATS.length > 0) { %>
+        <% for (var i in OVERLAY_FLOATS) {
+          var el = OVERLAY_FLOATS[i];
+          if (el.image) { %>
+            <img class="ad-floating-element" src="<%= el.url %>" style="<%= el.style %>" />
+          <% } else { %>
+            <span class="ad-floating-element" style="<%= el.style %>">
+              <%= el.copy %>
+            </span>
+          <% }
+        }
+      } %>
+
     </div>
 
     <div class="ad-hero-container">
@@ -83,6 +96,18 @@
     </div>
     <div class="placeholder">
     </div>
+    <% if (BG_FLOATS !== undefined && BG_FLOATS.length > 0) { %>
+      <% for (var i in BG_FLOATS) {
+        var el = BG_FLOATS[i];
+        if (el.image) { %>
+          <img class="ad-floating-element" src="<%= el.url %>" style="<%= el.style %>" />
+        <% } else { %>
+          <span class="ad-floating-element" style="<%= el.style %>">
+            <%= el.copy %>
+          </span>
+        <% }
+      }
+    } %>
   </div>
 </body>
 </html>

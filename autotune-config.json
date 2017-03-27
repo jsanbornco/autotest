@@ -190,7 +190,7 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "placement": {
+                            "background": {
                                 "title": "Placement",
                                 "type": "boolean",
                                 "enum": [true, false],
@@ -264,7 +264,7 @@
                                 "type": "select",
                                 "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right", "Custom"]
                             },
-                            "placement": {
+                            "background": {
                                 "type": "select",
                                 "optionLabels": ["Background", "Overlay"]
                             },

@@ -37,6 +37,34 @@ else
 options.banner_cta_color = false if options.banner_cta_color == "#000000"
 options.banner_color = false if options.banner_color == "#000000"
 
+bg_floats = []
+overlay_floats = []
+for (el in options.floating_element)
+  el.style = ""
+  placement = {}
+
+  if (el.position == 0 or el.position == 2)
+    placement.v = "top"
+  else
+    placement.v = "bottom"
+
+  if (el.position == 0 or el.position == 1)
+    placement.h = "left"
+  else
+    placement.h = "right"
+
+  horizontal = el.horizontal or 0
+  vertical = el.vertical or 0
+
+  if (el.background)
+    bg_floats.push(el)
+  else
+    overlay_floats.push(el)
+
+  if el.image
+    el.style = '{width: "#{el.size}em", #{placement.h}: "#{el.horizontal}%", #{placement.v}: "#{el.vertical}%"}'
+  else
+    el.style = '{font-size: "#{el.size}em", #{placement.h}: "#{el.horizontal}%", #{placement.v}: "#{el.vertical}%", color: "#{el.color}"}'
 
 data = {
   OVERLAY_COPY: options.copy[COPY_OPTION].main
@@ -67,7 +95,9 @@ data = {
   FADE_URL: options.fade_url or ''
   LEGAL_COPY: options.legal or ""
   LEGAL_SIZE: options.legal_size or "0.4"
-
+  FLOATING_ELEMENTS: options.floating_element or undefined
+  BG_FLOATS: bg_floats or undefined
+  OVERLAY_FLOATS: overlay_floats or undefined
 
 
   CLICK_MACRO: window.clickmacro or ''
