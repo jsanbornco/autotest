@@ -126,6 +126,11 @@
                     "dependencies": ["mobile_extra"],
                     "default": "0.4"
                 },
+                "floating_text" : {
+                    "title": "Floating Text",
+                    "type": "string",
+                    "enum": ["1","2","3","4"]
+                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",
@@ -183,24 +188,6 @@
                             }
                         }
                     }
-                },
-                "floating_text" : {
-                    "title": "Floating Text",
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "position": {
-                                "type": "number",
-                                "enum": [1,2,3,4],
-                                "options": {
-                                    "type": "select",
-                                    "label": "Position",
-                                    "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
-                                }
-                            }
-                        }
-                    }
                 }
             }
         },
@@ -210,6 +197,10 @@
                     "type": "integer",
                     "maximum": 100,
                     "numericEntry": true
+                },
+                "floating_text": {
+                    "type": "select",
+                    "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
                 }
             }
         }
