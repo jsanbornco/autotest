@@ -184,9 +184,9 @@
                         }
                     }
                 },
-                "floating_text": {
+                "floating_element": {
                     "type": "array",
-                    "title": "Floating Text",
+                    "title": "Floating Element",
                     "items": {
                         "type": "object",
                         "properties": {
@@ -194,7 +194,7 @@
                                 "title": "Placement",
                                 "type": "boolean",
                                 "enum": [true, false],
-                                "default": true
+                                "default": true,
                             },
                             "position": {
                                 "title": "Position",
@@ -202,6 +202,12 @@
                                 "enum": [1,2,3,4,5],
                                 "default": 1
                             },
+                            "image": {
+                                "title": "Type",
+                                "type": "boolean",
+                                "enum": [false, true],
+                                "default": false
+                            }
                             "vertical": {
                                 "title": "Vertical (in %)",
                                 "type": "number",
@@ -216,11 +222,29 @@
                                 "title": "Copy",
                                 "type": "string",
                                 "required": true
+                            },
+                            "color": {
+                                "title": "Color",
+                                "type": "color",
+                                "default": "#525252"
+                            },
+                            "size": {
+                                "title": "Size (in em)",
+                                "type": "number",
+                                "default": 1
+                            },
+                            "url": {
+                                "title": "Image URL",
+                                "type": "string",
+                                "required": true
                             }
                         },
                         "dependencies": {
                             "vertical": ["position"],
-                            "horizontal": ["position"]
+                            "horizontal": ["position"],
+                            "copy": ["image"],
+                            "color": ["image"],
+                            "url": ["image"]
                         }
                     }
                 }
@@ -233,7 +257,7 @@
                     "maximum": 100,
                     "numericEntry": true
                 },
-                "floating_text": {
+                "floating_element": {
                     "items": {
                         "fields": {
                             "position": {
@@ -244,6 +268,10 @@
                                 "type": "select",
                                 "optionLabels": ["Background", "Overlay"]
                             },
+                            "image": {
+                                "type": "select",
+                                "optionLabels": ["Text", "Image"]
+                            },
                             "vertical": {
                                 "dependencies": {
                                     "position": 5
@@ -252,6 +280,21 @@
                             "horizontal": {
                                 "dependencies": {
                                     "position": 5
+                                }
+                            },
+                            "copy": {
+                                "dependencies": {
+                                    "image": false
+                                }
+                            },
+                            "color": {
+                                "dependencies": {
+                                    "image": false
+                                }
+                            },
+                            "url": {
+                                "dependencies": {
+                                    "image": true
                                 }
                             }
                         }
