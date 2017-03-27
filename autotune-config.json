@@ -207,7 +207,7 @@
                                 "type": "boolean",
                                 "enum": [false, true],
                                 "default": false
-                            }
+                            },
                             "vertical": {
                                 "title": "Vertical (in %)",
                                 "type": "number",
