@@ -194,7 +194,7 @@
                                 "title": "Placement",
                                 "type": "boolean",
                                 "enum": [true, false],
-                                "default": true,
+                                "default": true
                             },
                             "position": {
                                 "title": "Position",
