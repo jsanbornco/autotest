@@ -43,12 +43,12 @@ for el in options.floating_element
   el.style = ""
   placement = {}
 
-  if el.position == 0 or el.position == 2
+  if el.position == 1 or el.position == 3
     placement.v = "top"
   else
     placement.v = "bottom"
 
-  if el.position == 0 or el.position == 1
+  if el.position == 1 or el.position == 2
     placement.h = "left"
   else
     placement.h = "right"
