@@ -138,6 +138,14 @@
                                 "enum": ["1","2","3","4"]
                             }
                         }
+                    },
+                    "options": {
+                        "fields": {
+                            "floating_text": {
+                                "type": "select",
+                                "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
+                            }
+                        }
                     }
                 },
                 "boop" : {
