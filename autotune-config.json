@@ -190,15 +190,18 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "floating_text" : {
-                                "title": "Floating Text",
+                            "position" : {
+                                "title": "Position",
+                                "type": "number",
+                                "enum": [1,2,3,4],
+                                "required": true
+                            },
+                            "copy": {
+                                "title": "Copy",
                                 "type": "string",
-                                "enum": ["1","2","3","4"]
+                                "required": true
                             }
                         }
-                    },
-                    "options": {
-
                     }
                 }
             }
@@ -213,7 +216,7 @@
                 "floating_text": {
                     "items": {
                         "fields": {
-                            "floating_text": {
+                            "position": {
                                 "type": "select",
                                 "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
                             }
