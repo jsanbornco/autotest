@@ -126,33 +126,6 @@
                     "dependencies": ["mobile_extra"],
                     "default": "0.4"
                 },
-                "test": {
-                    "type": "array",
-                    "title": "Test",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "floating_text" : {
-                                "title": "Floating Text",
-                                "type": "string",
-                                "enum": ["1","2","3","4"]
-                            }
-                        }
-                    },
-                    "options": {
-                        "fields": {
-                            "floating_text": {
-                                "type": "select",
-                                "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
-                            }
-                        }
-                    }
-                },
-                "boop" : {
-                    "title": "Floating Text",
-                    "type": "string",
-                    "enum": ["1","2","3","4"]
-                },
                 "copy": {
                     "type": "array",
                     "title": "Copy",
@@ -210,6 +183,23 @@
                             }
                         }
                     }
+                },
+                "floating_text": {
+                    "type": "array",
+                    "title": "Floating Text",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "floating_text" : {
+                                "title": "Floating Text",
+                                "type": "string",
+                                "enum": ["1","2","3","4"]
+                            }
+                        }
+                    },
+                    "options": {
+
+                    }
                 }
             }
         },
@@ -221,8 +211,14 @@
                     "numericEntry": true
                 },
                 "floating_text": {
-                    "type": "select",
-                    "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
+                    "items": {
+                        "fields": {
+                            "floating_text": {
+                                "type": "select",
+                                "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
+                            }
+                        }
+                    }
                 }
             }
         }
