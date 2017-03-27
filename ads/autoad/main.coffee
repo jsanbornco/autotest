@@ -62,9 +62,9 @@ for el in options.floating_element
     overlay_floats.push(el)
 
   if el.image
-    el.style = "width: '#{el.size}em', #{placement.h}: '#{el.horizontal}%', #{placement.v}: '#{el.vertical}%'"
+    el.style = "width: '#{el.size}em'; #{placement.h}: '#{horizontal}%'; #{placement.v}: '#{vertical}%'"
   else
-    el.style = "font-size: '#{el.size}em', #{placement.h}: '#{el.horizontal}%', #{placement.v}: '#{el.vertical}%', color: '#{el.color}'"
+    el.style = "font-size: '#{el.size}em'; #{placement.h}: '#{horizontal}%'; #{placement.v}: '#{vertical}%'; color: '#{el.color}'"
 
 data = {
   OVERLAY_COPY: options.copy[COPY_OPTION].main
