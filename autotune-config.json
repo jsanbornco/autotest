@@ -191,9 +191,8 @@
                         "type": "object",
                         "properties": {
                             "position": {
-                                "schema": {
-                                    "enum": [1,2,3,4]
-                                },
+                                "type": "number",
+                                "enum": [1,2,3,4],
                                 "options": {
                                     "type": "select",
                                     "label": "Position",
