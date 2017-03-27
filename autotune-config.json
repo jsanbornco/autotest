@@ -190,17 +190,32 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "position" : {
+                            "position": {
                                 "title": "Position",
                                 "type": "number",
-                                "enum": [1,2,3,4],
+                                "enum": [1,2,3,4,5],
+                                "default": 1,
                                 "required": true
+                            },
+                            "vertical": {
+                                "title": "Vertical",
+                                "type": "number",
+                                "default": 0
+                            },
+                            "horizontal": {
+                                "title": "Horizontal",
+                                "type": "number",
+                                "default": 0
                             },
                             "copy": {
                                 "title": "Copy",
                                 "type": "string",
                                 "required": true
                             }
+                        },
+                        "dependencies": {
+                            "vertical": ["position"],
+                            "horizontal": ["position"]
                         }
                     }
                 }
@@ -218,7 +233,17 @@
                         "fields": {
                             "position": {
                                 "type": "select",
-                                "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
+                                "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right", "Custom"]
+                            },
+                            "vertical": {
+                                "dependencies": {
+                                    "position": 5
+                                }
+                            },
+                            "horizontal": {
+                                "dependencies": {
+                                    "position": 5
+                                }
                             }
                         }
                     }
