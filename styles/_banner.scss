@@ -190,13 +190,14 @@ div.storyplate-text-banner {
   }
 
   @media screen and (max-width: $screen-xs-max) {
-    img {
-      display: none;
-    }
 
     .cta-watch {
       div {
         justify-content: center;
+      }
+
+      img {
+        display: none;
       }
 
       h3 {
