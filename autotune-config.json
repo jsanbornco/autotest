@@ -190,20 +190,25 @@
                     "items": {
                         "type": "object",
                         "properties": {
+                            "placement": {
+                                "title": "Placement",
+                                "type": "boolean",
+                                "enum": [true, false],
+                                "default": true
+                            },
                             "position": {
                                 "title": "Position",
                                 "type": "number",
                                 "enum": [1,2,3,4,5],
-                                "default": 1,
-                                "required": true
+                                "default": 1
                             },
                             "vertical": {
-                                "title": "Vertical",
+                                "title": "Vertical (in %)",
                                 "type": "number",
                                 "default": 0
                             },
                             "horizontal": {
-                                "title": "Horizontal",
+                                "title": "Horizontal (in %)",
                                 "type": "number",
                                 "default": 0
                             },
@@ -234,6 +239,10 @@
                             "position": {
                                 "type": "select",
                                 "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right", "Custom"]
+                            },
+                            "placement": {
+                                "type": "select",
+                                "optionLabels": ["Background", "Overlay"]
                             },
                             "vertical": {
                                 "dependencies": {
