@@ -183,6 +183,25 @@
                             }
                         }
                     }
+                },
+                "floating_text" : {
+                    "title": "Floating Text",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "position": {
+                                "schema": {
+                                    "enum": [1,2,3,4]
+                                },
+                                "options": {
+                                    "type": "select",
+                                    "label": "Position",
+                                    "optionLabels": ["Top Left", "Bottom Left", "Top Right", "Bottom Right"]
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
