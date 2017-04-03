@@ -39,6 +39,7 @@ options.banner_color = false if options.banner_color == "#000000"
 
 bg_floats = []
 overlay_floats = []
+options.floating_element = options.floating_element || []
 for el in options.floating_element
   el.style = ""
   placement = {}
