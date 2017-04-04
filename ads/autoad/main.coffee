@@ -73,6 +73,7 @@ data = {
   BUTTON_COPY: options.copy[COPY_OPTION].cta
   BUTTON2_COPY: options.copy[COPY_OPTION].cta2
   HERO_IMAGE_URL: options.image
+  MOBILE_HERO_IMAGE_URL: options.mobile_image || false
   LOGO_URL: options.logo
   LOGO_COPY: options.logocopy or ''
   LOGO_WIDTH: options.logo_width or 6

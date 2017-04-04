@@ -86,7 +86,12 @@
       <% } %>
         <div class="fixed-hero-container">
           <a id="storyplate-<%= AD_ID %>-hero-redirect" target="_blank" href="<%= BG_MACRO %>">
-            <img class="ad-hero-img" src="<%= HERO_IMAGE_URL %><%= HERO_IMAGE_ARGS %>" />
+            <picture class="ad-hero-img">
+              <% if (MOBILE_HERO_IMAGE_URL) { %>
+                <source srcset="<%= MOBILE_HERO_IMAGE_URL %>" media="(max-width: 768px)">
+              <% } %>
+              <img src="<%= HERO_IMAGE_URL %><%= HERO_IMAGE_ARGS %>" />
+            </picture>
             <% if (FADE_URL !== undefined && FADE_URL !== '') { %>
               <img class="ad-hero-fade-img" src="<%= FADE_URL %><%= HERO_IMAGE_ARGS %>" />
             <% } %>

@@ -80,7 +80,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
 
       @media screen and (max-width: $screen-xs-max)
         margin-#{$anchor}: 0 !important
-        img
+        .ad-hero-img
           position: absolute
 
 .home, .modern-home
@@ -103,7 +103,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
       clip-path: url(#bg)
       height: 100%
 
-      img
+      .ad-hero-img
         backface-visibility: hidden
 
 @keyframes fade_img
@@ -326,7 +326,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
     background-color: #{$overlay_color_solid}
     z-index: 0
 
-    img
+    .ad-hero-img
       width: 100%
       position: relative
       max-width: none
@@ -349,7 +349,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
       height: 100%
       margin-#{$anchor}: 0 !important
 
-      img
+      .ad-hero-img
         height: auto
         width: #{$m_scale}%
         left: -#{$m_left_offset}%
