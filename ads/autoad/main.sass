@@ -8,32 +8,44 @@
   to
     stroke-dashoffset: 0
 
+//overlay settings
 $overlay_color: 'rgba(<%= OVERLAY_COLOR %>, 0.8)'
 $overlay_color_mobile: 'rgba(<%= OVERLAY_COLOR %>, <%= OVERLAY_OPACITY_MOBILE %>)'
 $overlay_color_solid: 'rgb(<%= OVERLAY_COLOR %>)'
 $main_weight: '<%= OVERLAY_COPY_WEIGHT %>'
+$overlay_display: '<%= OVERLAY_DISPLAY %>'
 
-$banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
-
+//CTA Settings
 $cta_color: 'rgb(<%= CTA_COLOR %>)'
 $cta2_color: 'rgb(<%= CTA2_COLOR %>)'
 $banner_cta_color: 'rgb(<%= BANNER_CTA_COLOR %>)'
 
+//Copy Settings
 $copy_color: '<%= COPY_COLOR %>'
 $cta_copy_color: '<%= CTA_COPY_COLOR %>'
+
+//BG Settings
 $offset: '<%= OFFSET %>'
 $m_offset: '<%= MOBILE_OFFSET %>'
 $m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
-$logo_width: '<%= LOGO_WIDTH %>'
-$m_logo_width: '<%= LOGO_WIDTH + 1 %>'
 $hp_offset: '<%= HOMEPAGE_OFFSET %>'
 $anchor: '<%= ANCHOR %>'
 $m_scale: '<%= MOBILE_SCALE %>'
+$desktop_ratio: '<%= DESKTOP_RATIO %>'
+$mobile_ratio: '<%= MOBILE_RATIO %>'
+
+//Logo Settings
+$logo_width: '<%= LOGO_WIDTH %>'
+$m_logo_width: '<%= LOGO_WIDTH + 1 %>'
 $banner_logo: '<%= BANNER_LOGO %>'
+
+//Legal Settings
 $legal_size: '<%= LEGAL_SIZE %>em'
 
+//Banner Settings
 $banner_cta_text_color: #{$cta_copy_color}
 $banner_title_color: #{$copy_color}
+$banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
 
 @import "../../styles/_banner.scss"
 
@@ -116,12 +128,17 @@ $banner_title_color: #{$copy_color}
   margin-top: 20px
   z-index: 0
   font-size: 0.8em
+  padding-top: #{$desktop_ratio}%
 
   @media screen and (min-width: 1500px)
     font-size: 1.2em
 
   @media screen and (min-width: 2400px)
     font-size: 1.5em
+
+  @media screen and (max-width: $screen-xs-max)
+    padding-top: #{$mobile_ratio}%
+
 
   .bg-clip
     display: none
@@ -145,6 +162,7 @@ $banner_title_color: #{$copy_color}
     margin-bottom: 2em
     padding: 2.5em 1em 3em 1em
     background-color: #{$overlay_color}
+    display: #{$overlay_display}
 
     @media screen and (max-width: $screen-xs-max)
       width: 100%

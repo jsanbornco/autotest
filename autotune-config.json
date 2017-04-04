@@ -31,19 +31,6 @@
                     "type": "string",
                     "required": false
                 },
-                "logocopy": {
-                    "title": "Logo Copy",
-                    "type": "string",
-                    "required": false,
-                    "dependencies": ["mobile_extra"]
-                },
-                "bannerlogo": {
-                    "title": "Logo in Banner? (desktop)",
-                    "type": "boolean",
-                    "required": false,
-                    "default": true,
-                    "dependencies": ["mobile_extra"]
-                },
                 "logo_width": {
                     "title": "Logo Width (in em)",
                     "type": "number",
@@ -54,76 +41,142 @@
                     "type": "color",
                     "required": true
                 },
-                "mobile_extra": {
+                "extra_options": {
                     "title": "Extra Options",
                     "type": "boolean"
+                },
+                "mobile_sizing": {
+                    "title": "Mobile BG Placement",
+                    "type": "boolean",
+                    "dependencies": ["extra_options"]
                 },
                 "bg_opacity_mobile": {
                     "title": "Mobile BG Opacity",
                     "type": "string",
                     "required": false,
-                    "dependencies": ["mobile_extra"]
+                    "dependencies": ["mobile_sizing"]
                 },
                 "mobile_offset": {
                     "title": "Mobile Hero Offset (in %)",
                     "type": "number",
                     "required": false,
-                    "dependencies": ["mobile_extra"]
+                    "dependencies": ["mobile_sizing"]
                 },
                 "mobile_left_offset": {
                     "title": "Mobile Hero Left Offset (in %)",
                     "type": "number",
                     "default": 30,
                     "required": false,
-                    "dependencies": ["mobile_extra"]
+                    "dependencies": ["mobile_sizing"]
                 },
                 "mobile_scale": {
                     "title": "Mobile Hero Scale (in %)",
                     "type": "number",
                     "default": 150,
-                    "dependencies": ["mobile_extra"]
+                    "dependencies": ["mobile_sizing"]
+                },
+                "logo_options": {
+                    "title": "Logo Options",
+                    "type": "boolean",
+                    "dependencies": ["extra_options"]
+                },
+                "logocopy": {
+                    "title": "Logo Copy",
+                    "type": "string",
+                    "required": false,
+                    "dependencies": ["logo_options"]
+                },
+                "general_placement": {
+                    "title": "General BG Options",
+                    "type": "boolean",
+                    "dependencies": ["extra_options"]
                 },
                 "hp_offset": {
                     "title": "Homepage Hero Offset (in %)",
                     "type": "number",
-                    "dependencies": ["mobile_extra"]
+                    "dependencies": ["general_placement"]
                 },
                 "anchor": {
                     "title": "Anchored to top?",
                     "type": "boolean",
-                    "dependencies": ["mobile_extra"]
+                    "dependencies": ["general_placement"]
+                },
+                "fixed_bg": {
+                    "title": "Fixed Background Ratio",
+                    "type": "boolean",
+                    "dependencies": ["general_placement"]
+                },
+                "bg_ratio_desktop": {
+                    "title": "Desktop Aspect Ratio (height divided by width)",
+                    "type": "number",
+                    "dependencies": ["fixed_bg"],
+                    "required": true
+                },
+                "bg_ratio_mobile": {
+                    "title": "Mobile Aspect Ratio",
+                    "type": "number",
+                    "dependencies": ["fixed_bg"],
+                    "required": true
+                },
+                "general_copy": {
+                    "title": "General Copy Options",
+                    "type": "boolean",
+                    "dependencies": ["extra_options"]
+                },
+                "hide_overlay": {
+                    "title": "Hide Overlay (box with words in it)",
+                    "type": "boolean",
+                    "dependencies": ["general_copy"]
                 },
                 "experimental": {
                     "title": "Experimental Features",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "dependencies": ["extra_options"]
                 },
                 "fade_url": {
                     "title": "Fade to Image",
                     "type": "string",
                     "dependencies": ["experimental"]
                 },
+                "banner_options": {
+                    "title": "Banner Options",
+                    "type": "boolean",
+                    "dependencies": ["extra_options"]
+                },
                 "banner_color": {
                     "title": "Top Banner Color",
                     "type": "color",
-                    "dependencies": ["mobile_extra"],
+                    "dependencies": ["banner_options"],
                     "default": "#ffffff"
                 },
                 "banner_cta_color": {
                     "title": "Top Banner CTA Color",
                     "type": "color",
-                    "dependencies": ["mobile_extra"],
+                    "dependencies": ["banner_options"],
                     "default": "#ffffff"
+                },
+                "bannerlogo": {
+                    "title": "Logo in Banner? (desktop)",
+                    "type": "boolean",
+                    "required": false,
+                    "default": true,
+                    "dependencies": ["banner_options"]
+                },
+                "legal_options": {
+                    "title": "Legal",
+                    "type": "boolean",
+                    "dependencies": ["extra_options"]
                 },
                 "legal": {
                     "title": "Legal Copy",
                     "type": "string",
-                    "dependencies": ["mobile_extra"],
+                    "dependencies": ["legal_options"],
                     "default": ""
                 },
                 "legal_size": {
                     "title": "Legal Copy Font Size (in em)",
                     "type": "string",
-                    "dependencies": ["mobile_extra"],
+                    "dependencies": ["legal_options"],
                     "default": "0.4"
                 },
                 "copy": {

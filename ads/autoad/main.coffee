@@ -99,6 +99,9 @@ data = {
   FLOATING_ELEMENTS: options.floating_element or undefined
   BG_FLOATS: bg_floats or undefined
   OVERLAY_FLOATS: overlay_floats or undefined
+  OVERLAY_DISPLAY: if options.hide_overlay then 'none' else 'block'
+  DESKTOP_RATIO: (options.bg_ratio_desktop || 0) * 100
+  MOBILE_RATIO: (options.bg_ratio_mobile || 0) * 100
 
 
   CLICK_MACRO: window.clickmacro or ''
