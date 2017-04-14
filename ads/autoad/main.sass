@@ -25,14 +25,14 @@ $copy_color: '<%= COPY_COLOR %>'
 $cta_copy_color: '<%= CTA_COPY_COLOR %>'
 
 //BG Settings
-$offset: '<%= OFFSET %>'
-$m_offset: '<%= MOBILE_OFFSET %>'
-$m_left_offset: '<%= MOBILE_LEFT_OFFSET %>'
-$hp_offset: '<%= HOMEPAGE_OFFSET %>'
+$offset: '<%= OFFSET %>%'
+$m_offset: '<%= MOBILE_OFFSET %>%'
+$m_left_offset: '<%= MOBILE_LEFT_OFFSET %>%'
+$hp_offset: '<%= HOMEPAGE_OFFSET %>%'
 $anchor: '<%= ANCHOR %>'
-$m_scale: '<%= MOBILE_SCALE %>'
-$desktop_ratio: '<%= DESKTOP_RATIO %>'
-$mobile_ratio: '<%= MOBILE_RATIO %>'
+$m_scale: '<%= MOBILE_SCALE %>%'
+$desktop_ratio: '<%= DESKTOP_RATIO %>%'
+$mobile_ratio: '<%= MOBILE_RATIO %>%'
 
 //Logo Settings
 $logo_width: '<%= LOGO_WIDTH %>'
@@ -76,7 +76,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
       z-index: 0
 
     .ad-hero
-      margin-#{$anchor}: -#{$offset}% !important
+      margin-#{$anchor}: -#{$offset} !important
 
       @media screen and (max-width: $screen-xs-max)
         margin-#{$anchor}: 0 !important
@@ -92,7 +92,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
       height: auto
       left: 0
       z-index: 0
-      bottom: -#{$hp_offset}%
+      bottom: -#{$hp_offset}
       transform: translateZ(0)
 
     .hover-plus
@@ -128,7 +128,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
   margin-top: 20px
   z-index: 0
   font-size: 0.8em
-  padding-top: #{$desktop_ratio}%
+  padding-top: #{$desktop_ratio}
 
   @media screen and (min-width: 1500px)
     font-size: 1.2em
@@ -137,7 +137,7 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
     font-size: 1.5em
 
   @media screen and (max-width: $screen-xs-max)
-    padding-top: #{$mobile_ratio}%
+    padding-top: #{$mobile_ratio}
 
 
   .bg-clip
@@ -351,9 +351,9 @@ $banner_color: 'rgba(<%= BANNER_COLOR %>, 0.8)'
 
       .ad-hero-img
         height: auto
-        width: #{$m_scale}%
-        left: -#{$m_left_offset}%
-        #{$anchor}: #{$m_offset}%
+        width: #{$m_scale}
+        left: -#{$m_left_offset}
+        #{$anchor}: #{$m_offset}
         position: absolute
 
 

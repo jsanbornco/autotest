@@ -51,7 +51,8 @@
     "node-sass": ">3.1.2",
     "raf": "3.0.0",
     "sassify": "git://github.com/britco/sassify.git#89bfd0ea27369e9c801b0893c1bede6c0d8c684f",
-    "through2": "0.6.5"
+    "through2": "0.6.5",
+    "underscore": ">1.7.0"
   },
   "devDependencies": {
     "aws-sdk": "2.1.32",
