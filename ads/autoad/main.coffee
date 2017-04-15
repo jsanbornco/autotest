@@ -93,7 +93,7 @@ data = {
   MOBILE_OFFSET: options.mobile_offset or 0
   MOBILE_LEFT_OFFSET: options.mobile_left_offset or 0
   HOMEPAGE_OFFSET: options.hp_offset or 0
-  MOBILE_SCALE: if options.mobile_image then 100.5 else options.mobile_scale or 150
+  MOBILE_SCALE: if (options.mobile_image and not options.mobile_scale) then 100 else options.mobile_scale or 150
   FADE_URL: options.fade_url or ''
   LEGAL_COPY: options.legal or ""
   LEGAL_SIZE: options.legal_size or "0.4"
